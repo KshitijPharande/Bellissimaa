@@ -76,7 +76,7 @@ export default function Home() {
 
           {/* Title */}
           <motion.h1 
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[family-name:var(--font-heading)] font-bold text-white tracking-[0.12em] uppercase"
+            className="text-3xl min-[380px]:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-[family-name:var(--font-heading)] font-bold text-white tracking-[0.05em] min-[380px]:tracking-[0.12em] uppercase"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
