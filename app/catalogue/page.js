@@ -30,7 +30,7 @@ const staggerContainer = {
 
 function CatalogueContent() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category') || '';
+  const initialCategory = searchParams.get('category') || 'saree';
 
   // Middle Category Selector State
   const [activeCollection, setActiveCollection] = useState(initialCategory);
@@ -207,12 +207,8 @@ function CatalogueContent() {
       <section className="py-16 bg-ivory min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* ================= MIDDLE FILTER SELECTOR ================= */}
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-16 border-b border-warm-gray-dark/30 pb-6">
-            {[
-              { id: '', name: 'All' },
-              ...CATEGORIES
-            ].map((cat) => {
+            {CATEGORIES.map((cat) => {
               const isActive = activeCollection === cat.id;
               return (
                 <button
@@ -229,9 +225,9 @@ function CatalogueContent() {
                       ? 'text-charcoal' 
                       : 'text-charcoal/45 hover:text-charcoal'
                   }`}
-                  id={`middle-filter-${cat.id || 'all'}`}
+                  id={`middle-filter-${cat.id}`}
                 >
-                  <span className="relative z-10">{cat.name === 'All' ? 'All Collections' : cat.name}</span>
+                  <span className="relative z-10">{cat.name}</span>
                   {isActive && (
                     <motion.span
                       layoutId="activeCategoryIndicator"
