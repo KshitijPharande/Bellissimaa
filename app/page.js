@@ -205,7 +205,7 @@ export default function Home() {
               id="featured-view-all"
               className="inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-charcoal border-b-2 border-gold pb-1.5 hover:text-gold transition-colors duration-300 group"
             >
-              View All Sarees
+              View Our Collections
               <svg
                 className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"

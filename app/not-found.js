@@ -31,7 +31,7 @@ export default function NotFound() {
             href="/catalogue"
             className="inline-flex items-center gap-2 px-8 py-3.5 text-sm tracking-[0.2em] uppercase text-charcoal border border-charcoal/20 hover:border-gold hover:text-gold transition-all duration-300"
           >
-            Browse Catalogue
+            Browse Collections
           </Link>
         </div>
       </div>

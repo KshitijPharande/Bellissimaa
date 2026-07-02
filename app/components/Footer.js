@@ -2,18 +2,16 @@ import Link from 'next/link';
 
 const QUICK_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/catalogue', label: 'Catalogue' },
+  { href: '/catalogue', label: 'Our Collections' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 
 const CATEGORIES = [
-  { href: '/catalogue?category=silk', label: 'Silk Sarees' },
-  { href: '/catalogue?category=banarasi', label: 'Banarasi Sarees' },
-  { href: '/catalogue?category=georgette', label: 'Georgette Sarees' },
-  { href: '/catalogue?category=chanderi', label: 'Chanderi Sarees' },
-  { href: '/catalogue?category=linen', label: 'Linen Sarees' },
-  { href: '/catalogue?category=chiffon', label: 'Chiffon Sarees' },
+  { href: '/catalogue?category=saree', label: 'Sarees' },
+  { href: '/catalogue?category=handbag', label: 'Handbags' },
+  { href: '/catalogue?category=jewellery', label: 'Jewellery' },
+  { href: '/catalogue?category=dress-material', label: 'Dress Material' },
 ];
 
 export default function Footer() {

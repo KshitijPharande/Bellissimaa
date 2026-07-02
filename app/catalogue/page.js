@@ -32,67 +32,134 @@ function CatalogueContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || '';
 
-  const [selectedCategories, setSelectedCategories] = useState(
-    initialCategory ? [initialCategory] : []
-  );
+  // Middle Category Selector State
+  const [activeCollection, setActiveCollection] = useState(initialCategory);
+
+  // Dynamic Left-Side Filter States
+  const [selectedFabrics, setSelectedFabrics] = useState([]);
+  const [selectedColors, setSelectedColors] = useState([]);
+  const [selectedOccasions, setSelectedOccasions] = useState([]);
+  
+  // Static Filter States
   const [priceRange, setPriceRange] = useState({ min: '', max: '' });
   const [showInStockOnly, setShowInStockOnly] = useState(false);
   const [sortBy, setSortBy] = useState('newest');
   const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const filteredProducts = useMemo(() => {
-    let filtered = PRODUCTS.filter((p) => p.active);
+  // 1. Get base list filtered by Middle Selector
+  const baseProducts = useMemo(() => {
+    let list = PRODUCTS.filter((p) => p.active);
+    if (activeCollection) {
+      list = list.filter((p) => p.category === activeCollection);
+    }
+    return list;
+  }, [activeCollection]);
 
-    // Category filter
-    if (selectedCategories.length > 0) {
-      filtered = filtered.filter((p) => selectedCategories.includes(p.category));
+  // 2. Extract dynamic filter options from the current base products
+  const filterOptions = useMemo(() => {
+    const fabrics = new Set();
+    const colors = new Set();
+    const occasions = new Set();
+
+    baseProducts.forEach((product) => {
+      if (product.fabric) fabrics.add(product.fabric);
+      if (product.color) colors.add(product.color);
+      if (product.occasion) {
+        product.occasion.split(',').forEach((o) => occasions.add(o.trim()));
+      }
+    });
+
+    return {
+      fabrics: Array.from(fabrics),
+      colors: Array.from(colors),
+      occasions: Array.from(occasions),
+    };
+  }, [baseProducts]);
+
+  // 3. Apply Left-Side Filters to base products to get final filtered list
+  const filteredProducts = useMemo(() => {
+    let result = [...baseProducts];
+
+    // Left-Side Fabric Filter
+    if (selectedFabrics.length > 0) {
+      result = result.filter((p) => selectedFabrics.includes(p.fabric));
     }
 
-    // Price filter
+    // Left-Side Color Filter
+    if (selectedColors.length > 0) {
+      result = result.filter((p) => selectedColors.includes(p.color));
+    }
+
+    // Left-Side Occasion Filter
+    if (selectedOccasions.length > 0) {
+      result = result.filter((p) => {
+        const itemOccasions = p.occasion.split(',').map((o) => o.trim());
+        return itemOccasions.some((o) => selectedOccasions.includes(o));
+      });
+    }
+
+    // Price Range Filter
     if (priceRange.min) {
-      filtered = filtered.filter((p) => p.price >= Number(priceRange.min));
+      result = result.filter((p) => p.price >= Number(priceRange.min));
     }
     if (priceRange.max) {
-      filtered = filtered.filter((p) => p.price <= Number(priceRange.max));
+      result = result.filter((p) => p.price <= Number(priceRange.max));
     }
 
-    // Stock filter
+    // In Stock Only Filter
     if (showInStockOnly) {
-      filtered = filtered.filter((p) => p.stock > 0);
+      result = result.filter((p) => p.stock > 0);
     }
 
-    // Sort
+    // Sort options: price sorting works numerically behind the scenes
     switch (sortBy) {
       case 'price-asc':
-        filtered.sort((a, b) => a.price - b.price);
+        result.sort((a, b) => a.price - b.price);
         break;
       case 'price-desc':
-        filtered.sort((a, b) => b.price - a.price);
+        result.sort((a, b) => b.price - a.price);
         break;
       case 'newest':
       default:
-        filtered.sort((a, b) => b.id - a.id);
+        result.sort((a, b) => b.id - a.id);
         break;
     }
 
-    return filtered;
-  }, [selectedCategories, priceRange, showInStockOnly, sortBy]);
+    return result;
+  }, [baseProducts, selectedFabrics, selectedColors, selectedOccasions, priceRange, showInStockOnly, sortBy]);
 
-  const toggleCategory = (slug) => {
-    setSelectedCategories((prev) =>
-      prev.includes(slug) ? prev.filter((c) => c !== slug) : [...prev, slug]
+  // Toggle helpers
+  const handleToggleFabric = (fabric) => {
+    setSelectedFabrics((prev) =>
+      prev.includes(fabric) ? prev.filter((f) => f !== fabric) : [...prev, fabric]
+    );
+  };
+
+  const handleToggleColor = (color) => {
+    setSelectedColors((prev) =>
+      prev.includes(color) ? prev.filter((c) => c !== color) : [...prev, color]
+    );
+  };
+
+  const handleToggleOccasion = (occasion) => {
+    setSelectedOccasions((prev) =>
+      prev.includes(occasion) ? prev.filter((o) => o !== occasion) : [...prev, occasion]
     );
   };
 
   const clearFilters = () => {
-    setSelectedCategories([]);
+    setSelectedFabrics([]);
+    setSelectedColors([]);
+    setSelectedOccasions([]);
     setPriceRange({ min: '', max: '' });
     setShowInStockOnly(false);
     setSortBy('newest');
   };
 
   const activeFilterCount =
-    selectedCategories.length +
+    selectedFabrics.length +
+    selectedColors.length +
+    selectedOccasions.length +
     (priceRange.min ? 1 : 0) +
     (priceRange.max ? 1 : 0) +
     (showInStockOnly ? 1 : 0);
@@ -116,7 +183,7 @@ function CatalogueContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Catalogue
+            Our Collections
           </motion.h1>
           <motion.div 
             className="divider-gold mt-6"
@@ -130,8 +197,8 @@ function CatalogueContent() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Explore our curated collection of handpicked sarees. Each piece is
-            a celebration of India&apos;s finest textile traditions.
+            Explore our curated collections. From heritage handloomed sarees to premium handbags,
+            timeless statement jewellery, and custom dress materials.
           </motion.p>
         </div>
       </section>
@@ -139,6 +206,44 @@ function CatalogueContent() {
       {/* Catalogue Body */}
       <section className="py-16 bg-ivory min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* ================= MIDDLE FILTER SELECTOR ================= */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-16 border-b border-warm-gray-dark/30 pb-6">
+            {[
+              { id: '', name: 'All' },
+              ...CATEGORIES
+            ].map((cat) => {
+              const isActive = activeCollection === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => {
+                    setActiveCollection(cat.id);
+                    // Reset left-side filters on category change to prevent empty states
+                    setSelectedFabrics([]);
+                    setSelectedColors([]);
+                    setSelectedOccasions([]);
+                  }}
+                  className={`relative px-6 py-3.5 text-xs sm:text-sm tracking-[0.2em] uppercase transition-all duration-300 font-semibold cursor-pointer ${
+                    isActive 
+                      ? 'text-charcoal' 
+                      : 'text-charcoal/45 hover:text-charcoal'
+                  }`}
+                  id={`middle-filter-${cat.id || 'all'}`}
+                >
+                  <span className="relative z-10">{cat.name === 'All' ? 'All Collections' : cat.name}</span>
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeCategoryIndicator"
+                      className="absolute inset-0 bg-gold/10 border-b-2 border-gold"
+                      transition={{ type: "spring", stiffness: 350, damping: 25 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
           <div className="flex gap-10">
             {/* ===== SIDEBAR FILTERS (Desktop) ===== */}
             <motion.aside 
@@ -148,14 +253,20 @@ function CatalogueContent() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <FilterPanel
-                selectedCategories={selectedCategories}
-                toggleCategory={toggleCategory}
+                filterOptions={filterOptions}
+                selectedFabrics={selectedFabrics}
+                selectedColors={selectedColors}
+                selectedOccasions={selectedOccasions}
+                handleToggleFabric={handleToggleFabric}
+                handleToggleColor={handleToggleColor}
+                handleToggleOccasion={handleToggleOccasion}
                 priceRange={priceRange}
                 setPriceRange={setPriceRange}
                 showInStockOnly={showInStockOnly}
                 setShowInStockOnly={setShowInStockOnly}
                 clearFilters={clearFilters}
                 activeFilterCount={activeFilterCount}
+                activeCollection={activeCollection}
               />
             </motion.aside>
 
@@ -182,7 +293,7 @@ function CatalogueContent() {
                   </button>
 
                   <p className="text-sm text-charcoal/50">
-                    {filteredProducts.length} saree{filteredProducts.length !== 1 ? 's' : ''}
+                    {filteredProducts.length} item{filteredProducts.length !== 1 ? 's' : ''}
                   </p>
                 </div>
 
@@ -230,7 +341,7 @@ function CatalogueContent() {
                   animate={{ opacity: 1 }}
                 >
                   <p className="text-charcoal/40 text-lg font-[family-name:var(--font-heading)]">
-                    No sarees match your filters
+                    No items match your filters
                   </p>
                   <button
                     onClick={clearFilters}
@@ -281,14 +392,20 @@ function CatalogueContent() {
                   </button>
                 </div>
                 <FilterPanel
-                  selectedCategories={selectedCategories}
-                  toggleCategory={toggleCategory}
+                  filterOptions={filterOptions}
+                  selectedFabrics={selectedFabrics}
+                  selectedColors={selectedColors}
+                  selectedOccasions={selectedOccasions}
+                  handleToggleFabric={handleToggleFabric}
+                  handleToggleColor={handleToggleColor}
+                  handleToggleOccasion={handleToggleOccasion}
                   priceRange={priceRange}
                   setPriceRange={setPriceRange}
                   showInStockOnly={showInStockOnly}
                   setShowInStockOnly={setShowInStockOnly}
                   clearFilters={clearFilters}
                   activeFilterCount={activeFilterCount}
+                  activeCollection={activeCollection}
                 />
               </div>
             </motion.div>
@@ -315,14 +432,20 @@ export default function CataloguePage() {
 
 /* ===== FILTER PANEL ===== */
 function FilterPanel({
-  selectedCategories,
-  toggleCategory,
+  filterOptions,
+  selectedFabrics,
+  selectedColors,
+  selectedOccasions,
+  handleToggleFabric,
+  handleToggleColor,
+  handleToggleOccasion,
   priceRange,
   setPriceRange,
   showInStockOnly,
   setShowInStockOnly,
   clearFilters,
   activeFilterCount,
+  activeCollection,
 }) {
   return (
     <div className="space-y-8">
@@ -332,44 +455,120 @@ function FilterPanel({
           onClick={clearFilters}
           className="text-xs tracking-[0.15em] uppercase text-gold hover:text-gold-dark transition-colors duration-300 underline underline-offset-4 cursor-pointer"
         >
-          Clear all filters ({activeFilterCount})
+          Clear filters ({activeFilterCount})
         </button>
       )}
 
-      {/* Categories */}
-      <div>
-        <h4 className="text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-4 font-semibold">
-          Category
-        </h4>
-        <div className="space-y-3">
-          {CATEGORIES.map((cat) => (
-            <label
-              key={cat.id}
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <div
-                className={`w-4 h-4 border transition-all duration-200 flex items-center justify-center ${
-                  selectedCategories.includes(cat.slug)
-                    ? 'bg-gold border-gold'
-                    : 'border-charcoal/30 group-hover:border-gold/50'
-                }`}
+      {/* Dynamic Material / Fabric Filter based on active Collection */}
+      {filterOptions.fabrics.length > 0 && (
+        <div>
+          <h4 className="text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-4 font-semibold">
+            {activeCollection === 'jewellery' ? 'Finish / Type' : activeCollection === 'handbag' ? 'Material' : 'Fabric'}
+          </h4>
+          <div className="space-y-3">
+            {filterOptions.fabrics.map((fabric) => (
+              <label
+                key={fabric}
+                className="flex items-center gap-3 cursor-pointer group"
               >
-                {selectedCategories.includes(cat.slug) && (
-                  <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                )}
-              </div>
-              <button
-                onClick={() => toggleCategory(cat.slug)}
-                className="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors duration-200 cursor-pointer"
-              >
-                {cat.name}
-              </button>
-            </label>
-          ))}
+                <div
+                  className={`w-4 h-4 border transition-all duration-200 flex items-center justify-center ${
+                    selectedFabrics.includes(fabric)
+                      ? 'bg-gold border-gold'
+                      : 'border-charcoal/30 group-hover:border-gold/50'
+                  }`}
+                >
+                  {selectedFabrics.includes(fabric) && (
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <button
+                  onClick={() => handleToggleFabric(fabric)}
+                  className="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors duration-200 text-left cursor-pointer"
+                >
+                  {fabric}
+                </button>
+              </label>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Dynamic Color Filter */}
+      {filterOptions.colors.length > 0 && (
+        <div>
+          <h4 className="text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-4 font-semibold">
+            Color
+          </h4>
+          <div className="space-y-3">
+            {filterOptions.colors.map((color) => (
+              <label
+                key={color}
+                className="flex items-center gap-3 cursor-pointer group"
+              >
+                <div
+                  className={`w-4 h-4 border transition-all duration-200 flex items-center justify-center ${
+                    selectedColors.includes(color)
+                      ? 'bg-gold border-gold'
+                      : 'border-charcoal/30 group-hover:border-gold/50'
+                  }`}
+                >
+                  {selectedColors.includes(color) && (
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <button
+                  onClick={() => handleToggleColor(color)}
+                  className="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors duration-200 text-left cursor-pointer"
+                >
+                  {color}
+                </button>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Dynamic Occasion Filter */}
+      {filterOptions.occasions.length > 0 && (
+        <div>
+          <h4 className="text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-4 font-semibold">
+            Occasion
+          </h4>
+          <div className="space-y-3">
+            {filterOptions.occasions.map((occ) => (
+              <label
+                key={occ}
+                className="flex items-center gap-3 cursor-pointer group"
+              >
+                <div
+                  className={`w-4 h-4 border transition-all duration-200 flex items-center justify-center ${
+                    selectedOccasions.includes(occ)
+                      ? 'bg-gold border-gold'
+                      : 'border-charcoal/30 group-hover:border-gold/50'
+                  }`}
+                >
+                  {selectedOccasions.includes(occ) && (
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </div>
+                <button
+                  onClick={() => handleToggleOccasion(occ)}
+                  className="text-sm text-charcoal/70 group-hover:text-charcoal transition-colors duration-200 text-left cursor-pointer"
+                >
+                  {occ}
+                </button>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Price Range */}
       <div>
@@ -474,7 +673,7 @@ function CatalogueCard({ product }) {
         <p className="text-[10px] text-gold tracking-[0.15em] uppercase mb-1 font-semibold">
           {CATEGORIES.find((c) => c.slug === product.category)?.name}
         </p>
-        <h3 className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1">
+        <h3 className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1 font-medium">
           {product.name}
         </h3>
         <div className="flex items-center justify-between mt-2">
