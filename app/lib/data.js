@@ -1,0 +1,223 @@
+// Demo product data — will be replaced with database data in Phase 2
+
+export const CATEGORIES = [
+  {
+    id: 'silk',
+    name: 'Silk Sarees',
+    slug: 'silk',
+    description: 'Pure silk sarees with rich textures and lustrous finish',
+    image: '/images/categories/silk.jpg',
+  },
+  {
+    id: 'banarasi',
+    name: 'Banarasi Sarees',
+    slug: 'banarasi',
+    description: 'Handwoven Banarasi sarees with intricate zari work',
+    image: '/images/categories/banarasi.jpg',
+  },
+  {
+    id: 'georgette',
+    name: 'Georgette Sarees',
+    slug: 'georgette',
+    description: 'Lightweight georgette sarees for effortless elegance',
+    image: '/images/categories/georgette.jpg',
+  },
+  {
+    id: 'chanderi',
+    name: 'Chanderi Sarees',
+    slug: 'chanderi',
+    description: 'Delicate Chanderi weaves with sheer texture and gold borders',
+    image: '/images/categories/chanderi.jpg',
+  },
+  {
+    id: 'linen',
+    name: 'Linen Sarees',
+    slug: 'linen',
+    description: 'Breathable linen sarees perfect for everyday grace',
+    image: '/images/categories/linen.jpg',
+  },
+  {
+    id: 'chiffon',
+    name: 'Chiffon Sarees',
+    slug: 'chiffon',
+    description: 'Flowing chiffon sarees with dreamy drapes',
+    image: '/images/categories/chiffon.jpg',
+  },
+];
+
+export const PRODUCTS = [
+  {
+    id: 1,
+    name: 'Royal Burgundy Silk',
+    slug: 'royal-burgundy-silk',
+    sku: 'BLM-SLK-001',
+    category: 'silk',
+    price: 12500,
+    description: 'A stunning pure silk saree in deep burgundy with intricate gold zari border and pallu. The rich texture and lustrous sheen make it perfect for weddings and festive occasions. Handcrafted with traditional weaving techniques passed down through generations.',
+    fabric: 'Pure Silk',
+    color: 'Burgundy',
+    occasion: 'Wedding, Festival',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Dry clean only. Store in muslin cloth.',
+    images: ['/images/products/silk-1.jpg', '/images/products/silk-1-b.jpg'],
+    featured: true,
+    newArrival: false,
+    stock: 8,
+    active: true,
+  },
+  {
+    id: 2,
+    name: 'Emerald Banarasi Brocade',
+    slug: 'emerald-banarasi-brocade',
+    sku: 'BLM-BNR-001',
+    category: 'banarasi',
+    price: 18500,
+    description: 'Exquisite handwoven Banarasi brocade saree in emerald green with gold and silver zari motifs. The rich Mughal-inspired patterns and heavy pallu make this a showstopper for grand celebrations.',
+    fabric: 'Banarasi Silk Brocade',
+    color: 'Emerald Green',
+    occasion: 'Wedding, Reception',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Dry clean only. Do not wring.',
+    images: ['/images/products/banarasi-1.jpg', '/images/products/banarasi-1-b.jpg'],
+    featured: true,
+    newArrival: true,
+    stock: 4,
+    active: true,
+  },
+  {
+    id: 3,
+    name: 'Blush Pink Georgette',
+    slug: 'blush-pink-georgette',
+    sku: 'BLM-GRG-001',
+    category: 'georgette',
+    price: 5800,
+    description: 'A delicate blush pink georgette saree with sequin and thread work along the border. Lightweight and flowy, it drapes beautifully for cocktail parties and evening events.',
+    fabric: 'Pure Georgette',
+    color: 'Blush Pink',
+    occasion: 'Party, Cocktail',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Gentle hand wash or dry clean.',
+    images: ['/images/products/georgette-1.jpg', '/images/products/georgette-1-b.jpg'],
+    featured: true,
+    newArrival: false,
+    stock: 12,
+    active: true,
+  },
+  {
+    id: 4,
+    name: 'Ivory Gold Chanderi',
+    slug: 'ivory-gold-chanderi',
+    sku: 'BLM-CHN-001',
+    category: 'chanderi',
+    price: 7200,
+    description: 'A graceful ivory Chanderi saree with delicate gold butis and a sheer texture that catches light beautifully. The traditional Chanderi weave brings a timeless charm.',
+    fabric: 'Chanderi Silk Cotton',
+    color: 'Ivory & Gold',
+    occasion: 'Pooja, Casual Festive',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Gentle hand wash. Iron on low heat.',
+    images: ['/images/products/chanderi-1.jpg', '/images/products/chanderi-1-b.jpg'],
+    featured: true,
+    newArrival: true,
+    stock: 6,
+    active: true,
+  },
+  {
+    id: 5,
+    name: 'Ocean Blue Linen',
+    slug: 'ocean-blue-linen',
+    sku: 'BLM-LNN-001',
+    category: 'linen',
+    price: 3800,
+    description: 'A breezy ocean blue linen saree with a contrasting coral border. Perfect for daytime events, office wear, or brunch gatherings. Incredibly comfortable and easy to drape.',
+    fabric: 'Pure Linen',
+    color: 'Ocean Blue',
+    occasion: 'Casual, Office, Brunch',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Machine wash gentle cycle. Iron while damp.',
+    images: ['/images/products/linen-1.jpg', '/images/products/linen-1-b.jpg'],
+    featured: false,
+    newArrival: true,
+    stock: 15,
+    active: true,
+  },
+  {
+    id: 6,
+    name: 'Midnight Chiffon Dream',
+    slug: 'midnight-chiffon-dream',
+    sku: 'BLM-CHF-001',
+    category: 'chiffon',
+    price: 4500,
+    description: 'A dreamy midnight blue chiffon saree with scattered silver mukaish work that shimmers with every movement. The lightweight fabric makes it ideal for evening soirées.',
+    fabric: 'Pure Chiffon',
+    color: 'Midnight Blue',
+    occasion: 'Evening, Party',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Dry clean recommended.',
+    images: ['/images/products/chiffon-1.jpg', '/images/products/chiffon-1-b.jpg'],
+    featured: true,
+    newArrival: false,
+    stock: 0,
+    active: true,
+  },
+  {
+    id: 7,
+    name: 'Marigold Banarasi Silk',
+    slug: 'marigold-banarasi-silk',
+    sku: 'BLM-BNR-002',
+    category: 'banarasi',
+    price: 22000,
+    description: 'A magnificent marigold yellow Banarasi silk saree with all-over jaal work in gold zari. The heavy pallu features a traditional kadhwa weave that showcases master craftsmanship.',
+    fabric: 'Pure Banarasi Silk',
+    color: 'Marigold Yellow',
+    occasion: 'Wedding, Haldi',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Dry clean only. Store wrapped in muslin.',
+    images: ['/images/products/banarasi-2.jpg', '/images/products/banarasi-2-b.jpg'],
+    featured: false,
+    newArrival: true,
+    stock: 3,
+    active: true,
+  },
+  {
+    id: 8,
+    name: 'Sage Green Linen',
+    slug: 'sage-green-linen',
+    sku: 'BLM-LNN-002',
+    category: 'linen',
+    price: 4200,
+    description: 'A serene sage green linen saree with minimalist silver zari border. The earthy tone and natural fabric make this perfect for conscious fashion lovers who value sustainability.',
+    fabric: 'Organic Linen',
+    color: 'Sage Green',
+    occasion: 'Casual, Office',
+    length: '6.3 meters (with blouse piece)',
+    careInstructions: 'Machine wash cold. Air dry.',
+    images: ['/images/products/linen-2.jpg', '/images/products/linen-2-b.jpg'],
+    featured: true,
+    newArrival: false,
+    stock: 10,
+    active: true,
+  },
+];
+
+export const WHATSAPP_NUMBER = 'XXXXXXX';
+
+export function getWhatsAppUrl(product) {
+  const message = `Hi Bellissimaa! I'm interested in *${product.name}* (SKU: ${product.sku}) from Bellissimaa. Could you please share more details?`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+export function getRestockWhatsAppUrl(product) {
+  const message = `Hi Bellissimaa! I noticed *${product.name}* (SKU: ${product.sku}) is currently out of stock on Bellissimaa. Could you let me know when it will be available again? I'm very interested!`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+export function formatPrice(price) {
+  return '#';
+}
+
+export function getStockStatus(stock) {
+  if (stock === 0) return { label: 'Out of Stock', color: 'text-gray-400', bg: 'bg-gray-100', dot: 'bg-gray-400' };
+  if (stock <= 5) return { label: `Only ${stock} left`, color: 'text-amber-600', bg: 'bg-amber-50', dot: 'bg-amber-500' };
+  return { label: 'In Stock', color: 'text-emerald-600', bg: 'bg-emerald-50', dot: 'bg-emerald-500' };
+}
