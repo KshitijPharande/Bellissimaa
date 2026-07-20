@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 // Animation presets
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
   }
@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       {/* Hero Banner */}
       <section className="relative pt-32 pb-24 bg-charcoal overflow-hidden">
-        <motion.div 
+        <motion.div
           className="absolute inset-0 opacity-20"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -38,13 +38,13 @@ export default function AboutPage() {
         >
           <Image
             src="/images/hero-bg.jpg"
-            alt="Bellissimaa heritage"
+            alt="Bellissima heritage"
             fill
             className="object-cover"
           />
         </motion.div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.p 
+          <motion.p
             className="text-xs tracking-[0.3em] uppercase text-gold mb-4 font-semibold"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -52,15 +52,15 @@ export default function AboutPage() {
           >
             Our Story
           </motion.p>
-          <motion.h1 
+          <motion.h1
             className="text-4xl sm:text-5xl md:text-6xl font-[family-name:var(--font-heading)] text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            About Bellissimaa
+            About Bellissima
           </motion.h1>
-          <motion.div 
+          <motion.div
             className="divider-gold mt-6"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Image */}
-            <motion.div 
+            <motion.div
               className="relative aspect-[4/5] overflow-hidden"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -83,7 +83,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissimaa — the art of Indian textiles"
+                alt="Bellissima — the art of Indian textiles"
                 fill
                 className="object-cover"
               />
@@ -108,21 +108,21 @@ export default function AboutPage() {
               <div className="w-12 h-[1px] bg-gold/40 my-8" />
               <div className="space-y-6 text-charcoal/60 leading-relaxed">
                 <p>
-                  Bellissimaa was born from a simple yet profound idea — that every woman 
-                  deserves to feel extraordinary in what she wears. The Italian word for 
-                  &quot;most beautiful,&quot; Bellissimaa reflects our commitment to bringing 
+                  Bellissima was born from a simple yet profound idea — that every woman
+                  deserves to feel extraordinary in what she wears. The Italian word for
+                  &quot;most beautiful,&quot; Bellissima reflects our commitment to bringing
                   the finest sarees to discerning women who appreciate artistry and heritage.
                 </p>
                 <p>
-                  What began as a personal passion for collecting rare, handwoven sarees 
-                  soon blossomed into something much larger. Each visit to weaving clusters 
-                  across India — from Varanasi to Kanchipuram, from Chanderi to Maheshwar — 
-                  deepened the conviction that these textile traditions deserve a platform 
+                  What began as a personal passion for collecting rare, handwoven sarees
+                  soon blossomed into something much larger. Each visit to weaving clusters
+                  across India — from Varanasi to Kanchipuram, from Chanderi to Maheshwar —
+                  deepened the conviction that these textile traditions deserve a platform
                   that honors their beauty while making them accessible to the modern woman.
                 </p>
                 <p>
-                  Today, Bellissimaa stands as a bridge between centuries-old weaving traditions 
-                  and contemporary aesthetics. Every saree in our collection is a carefully 
+                  Today, Bellissima stands as a bridge between centuries-old weaving traditions
+                  and contemporary aesthetics. Every saree in our collection is a carefully
                   curated piece that celebrates the magic of handcrafted Indian textiles.
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Text — reversed order on desktop */}
-            <motion.div 
+            <motion.div
               className="lg:order-2"
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -144,34 +144,26 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-xs tracking-[0.3em] uppercase text-gold mb-6 font-semibold">
-                The Founder
+                The Founder&apos;s Vision
               </p>
               <h2 className="text-3xl sm:text-4xl font-[family-name:var(--font-heading)] text-charcoal leading-tight">
-                Our Vision & Curation
+                Beauty, Artistry & Color Harmony
               </h2>
               <div className="w-12 h-[1px] bg-gold/40 my-8" />
               <div className="space-y-6 text-charcoal/60 leading-relaxed">
                 <p>
-                  Based in Pune, Bellissimaa is more than a store — we are curators 
-                  who speak through textiles. With an eye for quality and an instinct for 
-                  timeless design, we personally select every saree that bears the 
-                  Bellissimaa name.
+                  With a background in beauty and makeup, our founder brings an instinctual 
+                  understanding of color harmony to Bellissima. She hand-selects color 
+                  combinations that are aesthetically pleasing from both a beauty and design perspective.
                 </p>
                 <p>
-                  Our journey into the world of sarees began with heirloom collections 
-                  passed down through generations — a treasure trove of Paithani and Banarasi sarees, 
-                  each carrying decades of memories. That emotional connection to textiles drives our mission: 
-                  to help every customer find a saree that doesn&apos;t just adorn, but transforms.
-                </p>
-                <p>
-                  Our approach is deeply personal. Every purchase is a conversation — we 
-                  guide customers through WhatsApp, understanding their occasion, style, and 
-                  personality before recommending the perfect drape.
+                  Based in Pune, we personally guide every client on WhatsApp to match 
+                  tones and occasions for the perfect ensemble.
                 </p>
               </div>
 
               <a
-                href="https://wa.me/XXXXXXX?text=Hi!%20I'd%20love%20to%20know%20more%20about%20Bellissimaa."
+                href="https://wa.me/XXXXXXX?text=Hi!%20I'd%20love%20to%20know%20more%20about%20Bellissima."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-10 text-sm tracking-[0.2em] uppercase text-gold border border-gold/40 px-10 py-4 hover:bg-gold/10 transition-all duration-300 group font-medium"
@@ -184,7 +176,7 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Image */}
-            <motion.div 
+            <motion.div
               className="lg:order-1 relative aspect-square overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.03)]"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -193,7 +185,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissimaa — Crafted with Love"
+                alt="Bellissima — Crafted with Love"
                 fill
                 className="object-cover"
               />
@@ -213,7 +205,7 @@ export default function AboutPage() {
       <section className="py-24 bg-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <motion.div 
+          <motion.div
             className="text-center mb-20"
             initial="hidden"
             whileInView="visible"
@@ -229,7 +221,7 @@ export default function AboutPage() {
             <div className="divider-gold mt-6" />
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             initial="hidden"
             whileInView="visible"
@@ -290,7 +282,7 @@ export default function AboutPage() {
 
       {/* CTA Banner */}
       <section className="py-24 bg-charcoal text-center relative overflow-hidden">
-        <motion.div 
+        <motion.div
           className="max-w-2xl mx-auto px-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

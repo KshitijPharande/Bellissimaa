@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 const WHATSAPP_NUMBER = 'XXXXXXX';
-const DEFAULT_MESSAGE = "Hi Bellissimaa! I'm interested in Bellissimaa sarees. Could you help me with your latest collection?";
+const DEFAULT_MESSAGE = "Hi Bellissima! I'm interested in Bellissima collections. Could you help me with your latest designs?";
 
 export default function WhatsAppFAB() {
   const [hovered, setHovered] = useState(false);

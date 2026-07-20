@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold tracking-[0.2em] uppercase font-[family-name:var(--font-heading)] text-white mb-5">
-              Bellissimaa
+              Bellissima
             </h3>
             <p className="text-sm leading-relaxed text-white/50 max-w-xs">
               Curating timeless sarees that blend heritage craftsmanship with modern elegance. 
@@ -101,7 +101,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 mt-0.5 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
-                <span className="text-white/50">hello@bellissimaa.in</span>
+                <span className="text-white/50">hello@bellissima.in</span>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Bottom Divider */}
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30 tracking-wider">
-            © {new Date().getFullYear()} Bellissimaa. All rights reserved.
+            © {new Date().getFullYear()} Bellissima. All rights reserved.
           </p>
           <p className="text-xs text-white/20 tracking-wider">
             Crafted with ♡ in Pune

@@ -53,7 +53,7 @@ export default function Home() {
         >
           <Image
             src="/images/hero-bg.jpg"
-            alt="Bellissimaa luxury saree collection"
+            alt="Bellissima luxury saree collection"
             fill
             className="object-cover"
             priority
@@ -81,7 +81,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            Bellissimaa
+            Bellissima
           </motion.h1>
 
           {/* Tagline */}
@@ -343,7 +343,7 @@ export default function Home() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissimaa — the art of saree"
+                alt="Bellissima — the art of saree"
                 fill
                 className="object-cover"
               />
@@ -372,14 +372,14 @@ export default function Home() {
               <div className="w-12 h-[1px] bg-gold/40 my-8" />
 
               <p className="text-white/60 leading-relaxed text-base mb-6">
-                Bellissimaa was born from a deep love for India&apos;s textile heritage. 
-                Based in Pune, we curate sarees that honor 
-                centuries-old weaving traditions while embracing contemporary aesthetics.
+                Bellissima was born from a passion for heritage craft and color harmony. 
+                Guided by a background in beauty and makeup, our founder brings an instinctual 
+                understanding of tone, selecting color combinations that are aesthetically 
+                pleasing from both a beauty and design perspective.
               </p>
               <p className="text-white/60 leading-relaxed text-base mb-10">
-                Every saree in our collection is handpicked — each thread telling a 
-                story of the artisan&apos;s devotion, the region&apos;s cultural identity, and 
-                the timeless beauty of Indian craftsmanship.
+                Based in Pune, every piece in our collection — from handcrafted sarees to statement jewellery 
+                and accessories — is handpicked to celebrate timeless grace and authentic Indian craftsmanship.
               </p>
 
               <Link

@@ -20,17 +20,17 @@ const dmSans = DM_Sans({
 
 export const metadata = {
   title: {
-    default: "Bellissimaa — Premium Handcrafted Sarees",
-    template: "%s | Bellissimaa",
+    default: "Bellissima — Premium Handcrafted Sarees",
+    template: "%s | Bellissima",
   },
   description:
-    "Discover exquisite handcrafted sarees at Bellissimaa from Pune — featuring Silk, Banarasi, Georgette, Chanderi, Linen & Chiffon collections. Draped in Heritage. Designed for Today.",
+    "Discover exquisite handcrafted sarees at Bellissima from Pune — featuring Silk, Banarasi, Georgette, Chanderi, Linen & Chiffon collections. Draped in Heritage. Designed for Today.",
   keywords: [
     "saree",
     "sarees",
     "handcrafted sarees",
     "Indian sarees",
-    "Bellissimaa",
+    "Bellissima",
     "Pune sarees",
     "silk sarees",
     "banarasi sarees",
@@ -38,12 +38,12 @@ export const metadata = {
     "premium sarees",
   ],
   openGraph: {
-    title: "Bellissimaa — Premium Handcrafted Sarees",
+    title: "Bellissima — Premium Handcrafted Sarees",
     description:
       "Timeless sarees that blend heritage with modern elegance. Handpicked and curated in Pune.",
     type: "website",
     locale: "en_IN",
-    siteName: "Bellissimaa",
+    siteName: "Bellissima",
   },
   robots: {
     index: true,

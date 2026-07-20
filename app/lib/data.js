@@ -310,12 +310,12 @@ export const PRODUCTS = [
 export const WHATSAPP_NUMBER = 'XXXXXXX';
 
 export function getWhatsAppUrl(product) {
-  const message = `Hi Bellissimaa! I would like to buy *${product.name}* (SKU: ${product.sku}) from Bellissimaa. Could you please let me know how to proceed?`;
+  const message = `Hi Bellissima! I would like to buy *${product.name}* (SKU: ${product.sku}) from Bellissima. Could you please let me know how to proceed?`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 export function getRestockWhatsAppUrl(product) {
-  const message = `Hi Bellissimaa! I noticed *${product.name}* (SKU: ${product.sku}) is currently out of stock on Bellissimaa. Could you let me know when it will be available again? I am very interested!`;
+  const message = `Hi Bellissima! I noticed *${product.name}* (SKU: ${product.sku}) is currently out of stock on Bellissima. Could you let me know when it will be available again? I am very interested!`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 

@@ -49,7 +49,7 @@ export default function Navbar() {
                 scrolled ? 'text-charcoal' : 'text-white'
               }`}
             >
-              Bellissimaa
+              Bellissima
             </span>
           </Link>
 
@@ -155,7 +155,7 @@ export default function Navbar() {
             {/* Bottom branding */}
             <div className="mt-auto pb-10">
               <p className="text-xs text-charcoal/30 tracking-[0.2em] uppercase">
-                © {new Date().getFullYear()} Bellissimaa
+                © {new Date().getFullYear()} Bellissima
               </p>
             </div>
           </div>
