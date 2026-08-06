@@ -97,7 +97,7 @@ export default function ProductPage() {
             >
               {/* Main Image with slide transitions */}
               <div
-                className="relative aspect-[3/4] overflow-hidden bg-warm-gray cursor-zoom-in mb-4 shadow-[0_4px_30px_rgba(0,0,0,0.02)]"
+                className="relative aspect-[3/4] overflow-hidden bg-white cursor-zoom-in mb-4 shadow-[0_4px_30px_rgba(0,0,0,0.02)]"
                 onClick={() => setLightboxOpen(true)}
               >
                 <AnimatePresence mode="wait">
@@ -113,7 +113,7 @@ export default function ProductPage() {
                       src={product.images[selectedImage]}
                       alt={`${product.name} — Image ${selectedImage + 1}`}
                       fill
-                      className={`object-cover ${isOutOfStock ? 'grayscale' : ''}`}
+                      className={`object-contain ${isOutOfStock ? 'grayscale' : ''}`}
                       priority
                     />
                   </motion.div>

@@ -631,12 +631,12 @@ function CatalogueCard({ product }) {
         className={`group block ${isOutOfStock ? 'opacity-65' : ''}`}
       >
         {/* Image */}
-        <div className="relative aspect-[3/4] overflow-hidden bg-warm-gray mb-3.5 shadow-[0_4px_25px_rgba(0,0,0,0.01)]">
+        <div className="relative aspect-[3/4] overflow-hidden bg-white mb-3.5 shadow-[0_4px_25px_rgba(0,0,0,0.01)]">
           <Image
             src={product.images[0]}
             alt={product.name}
             fill
-            className={`object-cover transition-transform duration-[1s] ${
+            className={`object-contain transition-transform duration-[1s] ${
               isOutOfStock ? 'grayscale' : 'group-hover:scale-105'
             }`}
           />
