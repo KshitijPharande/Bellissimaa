@@ -7,15 +7,15 @@
 
 @theme inline {
   /* Brand Colors */
-  --color-ivory: #FFFDF5;
-  --color-ivory-dark: #F5F0EB;
+  --color-ivory: #FFFFFF;
+  --color-ivory-dark: #FAFAFA;
   --color-gold: #C9A84C;
   --color-gold-light: #E8D5A0;
   --color-gold-dark: #A88A3A;
   --color-charcoal: #1A1A1A;
   --color-charcoal-light: #2D2D2D;
-  --color-warm-gray: #F5F0EB;
-  --color-warm-gray-dark: #D4CFC9;
+  --color-warm-gray: #FFFFFF;
+  --color-warm-gray-dark: #E5E5E5;
   --color-rose: #C77D8A;
   --color-rose-light: #F0D4DA;
   --color-sage: #8A9A7B;
