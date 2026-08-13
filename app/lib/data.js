@@ -24,7 +24,7 @@ export const CATEGORIES = [
   },
 ];
 
-export const PRODUCTS = [
+const RAW_PRODUCTS = [
   // --- MODEL SHOOT SAREES ---
   {
     id: 1,
@@ -436,7 +436,7 @@ export const PRODUCTS = [
     careInstructions: 'Dry clean only.',
     images: [
       '/images/Saree/Tasar saree with banarasi pallu_/Peacock Blue  Teal Blue.jpg',
-      '/images/Saree/Tasar saree with banarasi pallu_/Copper Brown.jpg',
+      '/images/Saree/Tasar saree with banarasi pallu_/Copper Brown_1.jpg',
       '/images/Saree/Tasar saree with banarasi pallu_/Deep Purple  Violet.jpg',
       '/images/Saree/Tasar saree with banarasi pallu_/Emerald Green  Dark Teal.jpg',
       '/images/Saree/Tasar saree with banarasi pallu_/Magenta  Fuchsia.jpg'
@@ -867,3 +867,22 @@ export function getStockStatus(stock) {
   if (stock === 0) return { label: 'Out of Stock', color: 'text-gray-400', bg: 'bg-gray-100', dot: 'bg-gray-400' };
   return { label: 'In Stock', color: 'text-emerald-600', bg: 'bg-emerald-50', dot: 'bg-emerald-500' };
 }
+
+// Post-process RAW_PRODUCTS to dynamically sort images ending/containing _1, (1), or first to the front
+export const PRODUCTS = RAW_PRODUCTS.map(product => {
+  if (product.images && product.images.length > 1) {
+    const sortedImages = [...product.images].sort((a, b) => {
+      const aName = a.substring(a.lastIndexOf('/') + 1);
+      const bName = b.substring(b.lastIndexOf('/') + 1);
+      
+      const aHasOne = aName.includes('(1)') || aName.includes('_1') || aName.toUpperCase().includes('FIRST');
+      const bHasOne = bName.includes('(1)') || bName.includes('_1') || bName.toUpperCase().includes('FIRST');
+      
+      if (aHasOne && !bHasOne) return -1;
+      if (!aHasOne && bHasOne) return 1;
+      return 0;
+    });
+    return { ...product, images: sortedImages };
+  }
+  return product;
+});
