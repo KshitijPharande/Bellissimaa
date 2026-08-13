@@ -138,7 +138,7 @@ const RAW_PRODUCTS = [
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Banarasi Saree 2650--/Dark Pink and Maroon.jpg',
+      '/images/Saree/Banarasi Saree 2650--/Dark Pink and Maroon_1.jpg',
       '/images/Saree/Banarasi Saree 2650--/Dark Yellow.jpg'
     ],
     featured: true,
@@ -162,7 +162,7 @@ const RAW_PRODUCTS = [
     images: [
       '/images/Saree/Banarasi Saree with butte 3050--/Golden.jpg',
       '/images/Saree/Banarasi Saree with butte 3050--/Pink light.jpg',
-      '/images/Saree/Banarasi Saree with butte 3050--/Purple.jpg'
+      '/images/Saree/Banarasi Saree with butte 3050--/Purple_1.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -185,7 +185,7 @@ const RAW_PRODUCTS = [
     images: [
       '/images/Saree/Jamdani 1550--/Multi-color.jpg',
       '/images/Saree/Jamdani 1550--/Multi color 2.jpg',
-      '/images/Saree/Jamdani 1550--/Peacock Blue.jpg'
+      '/images/Saree/Jamdani 1550--/Peacock Blue_1.jpg'
     ],
     featured: false,
     newArrival: false,
@@ -206,7 +206,7 @@ const RAW_PRODUCTS = [
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only. Store wrapped in cotton cloth.',
     images: [
-      '/images/Saree/Kanchi Silk 3050--/Purple Yellow.jpg',
+      '/images/Saree/Kanchi Silk 3050--/Purple Yellow_1.jpg',
       '/images/Saree/Kanchi Silk 3050--/Multi-Color.jpg'
     ],
     featured: true,
@@ -229,7 +229,7 @@ const RAW_PRODUCTS = [
     careInstructions: 'Dry clean only.',
     images: [
       '/images/Saree/Kantha with ikat pallu 3150--/Black.jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/Dark Purple.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Dark Purple_1.jpg',
       '/images/Saree/Kantha with ikat pallu 3150--/Light Blue.jpg',
       '/images/Saree/Kantha with ikat pallu 3150--/Maroon.jpg',
       '/images/Saree/Kantha with ikat pallu 3150--/Orange.jpg',
@@ -279,6 +279,18 @@ const RAW_PRODUCTS = [
       '/images/Saree/Organza Saree 1550--/Golden Off white.jpg',
       '/images/Saree/Organza Saree 1550--/Peach.jpg',
       '/images/Saree/Organza Saree 1550--/Pista.jpg'
+    ],
+    variantColors: [
+      'Blue',
+      'Gold',
+      'Cream',
+      'Pink & Silver'
+    ],
+    variantNames: [
+      'Exquisite Organza Saree - Blue',
+      'Exquisite Organza Saree - Gold',
+      'Exquisite Organza Saree - Cream',
+      'Exquisite Organza Saree - Pink & Silver'
     ],
     featured: true,
     newArrival: false,
@@ -341,7 +353,7 @@ const RAW_PRODUCTS = [
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only. Handle with care.',
     images: [
-      '/images/Saree/Pure silk banarasi kora 13550--/Golden_bronze.jpg',
+      '/images/Saree/Pure silk banarasi kora 13550--/Golden_bronze_1.jpg',
       '/images/Saree/Pure silk banarasi kora 13550--/Silver_grey.jpg'
     ],
     featured: true,
@@ -364,7 +376,7 @@ const RAW_PRODUCTS = [
     careInstructions: 'Dry clean recommended.',
     images: [
       '/images/Saree/Semi Raw Silk 2950--/Light Blue.jpg',
-      '/images/Saree/Semi Raw Silk 2950--/Blue.jpg',
+      '/images/Saree/Semi Raw Silk 2950--/Blue_1.jpg',
       '/images/Saree/Semi Raw Silk 2950--/Maroon Red.jpg',
       '/images/Saree/Semi Raw Silk 2950--/Purple.jpg',
       '/images/Saree/Semi Raw Silk 2950--/DSC_0065 (2).JPG'
@@ -390,7 +402,7 @@ const RAW_PRODUCTS = [
     images: [
       '/images/Saree/Soft raw silk 2950--/Sea green.jpg',
       '/images/Saree/Soft raw silk 2950--/Grey.jpg',
-      '/images/Saree/Soft raw silk 2950--/Yellow.jpg',
+      '/images/Saree/Soft raw silk 2950--/Yellow_1.jpg',
       '/images/Saree/Soft raw silk 2950--/Yellow_2.jpg'
     ],
     featured: false,
@@ -414,7 +426,7 @@ const RAW_PRODUCTS = [
     images: [
       '/images/Saree/Tasar Paithani 6150--/Sky Blue  Azure Blue.jpg',
       '/images/Saree/Tasar Paithani 6150--/Beige  Mushroom Grey.jpg',
-      '/images/Saree/Tasar Paithani 6150--/Royal Blue  Indigo (1).jpg'
+      '/images/Saree/Tasar Paithani 6150--/Royal Blue  Indigo _1.jpg'
     ],
     featured: true,
     newArrival: false,
@@ -826,8 +838,12 @@ export function getProductVariantInfo(product, selectedImageIndex = 0) {
     .replace(/\s+/g, ' ')
     .trim();
 
-  // Strip trailing " (1)" or similar copy counters in filenames
-  colorName = colorName.replace(/\(\d+\)/g, '').trim();
+  // Strip trailing " (1)", "_1", " _1", " (Variant)" or similar counters in filenames
+  colorName = colorName
+    .replace(/\(\d+\)/g, '')
+    .replace(/_1/g, '')
+    .replace(/ - 1/g, '')
+    .trim();
 
   // Make the first letter of each word uppercase
   colorName = colorName
