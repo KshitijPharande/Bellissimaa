@@ -11,7 +11,6 @@ const CATEGORIES = [
   { href: '/catalogue?category=saree', label: 'Sarees' },
   { href: '/catalogue?category=handbag', label: 'Handbags' },
   { href: '/catalogue?category=jewellery', label: 'Jewellery' },
-  { href: '/catalogue?category=dress-material', label: 'Dress Material' },
 ];
 
 export default function Footer() {

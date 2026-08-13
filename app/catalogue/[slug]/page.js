@@ -12,6 +12,7 @@ import {
   getStockStatus,
   getWhatsAppUrl,
   getRestockWhatsAppUrl,
+  getProductVariantInfo,
 } from '../../lib/data';
 
 // Animation presets
@@ -62,6 +63,10 @@ export default function ProductPage() {
   const stockStatus = getStockStatus(product.stock);
   const isOutOfStock = product.stock === 0;
   const category = CATEGORIES.find((c) => c.slug === product.category);
+  const variantInfo = getProductVariantInfo(product, selectedImage);
+  const variantName = variantInfo.name;
+  const variantColor = variantInfo.color;
+
   const relatedProducts = PRODUCTS.filter(
     (p) => p.category === product.category && p.id !== product.id && p.active
   ).slice(0, 4);
@@ -80,7 +85,7 @@ export default function ProductPage() {
               Our Collections
             </Link>
             <span>/</span>
-            <span className="text-charcoal/70">{product.name}</span>
+            <span className="text-charcoal/70">{variantName}</span>
           </nav>
         </div>
       </div>
@@ -111,7 +116,7 @@ export default function ProductPage() {
                   >
                     <Image
                       src={product.images[selectedImage]}
-                      alt={`${product.name} — Image ${selectedImage + 1}`}
+                      alt={`${variantName} — Image ${selectedImage + 1}`}
                       fill
                       className={`object-contain ${isOutOfStock ? 'grayscale' : ''}`}
                       priority
@@ -173,7 +178,7 @@ export default function ProductPage() {
 
               {/* Name */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-[family-name:var(--font-heading)] text-charcoal leading-tight font-medium">
-                {product.name}
+                {variantName}
               </h1>
 
               {/* Price */}
@@ -201,7 +206,7 @@ export default function ProductPage() {
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
                   { label: 'Fabric', value: product.fabric },
-                  { label: 'Color', value: product.color },
+                  { label: 'Color', value: variantColor },
                   { label: 'Occasion', value: product.occasion },
                   { label: 'Length', value: product.length },
                 ].map((detail) => (
@@ -226,7 +231,7 @@ export default function ProductPage() {
               <div className="mt-10 space-y-3">
                 {!isOutOfStock ? (
                   <motion.a
-                    href={getWhatsAppUrl(product)}
+                    href={getWhatsAppUrl(product, selectedImage)}
                     target="_blank"
                     rel="noopener noreferrer"
                     id="enquire-whatsapp"

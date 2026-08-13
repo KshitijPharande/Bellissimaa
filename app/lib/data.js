@@ -22,13 +22,6 @@ export const CATEGORIES = [
     description: 'Timeless statement jewellery hand-curated for festive styling',
     image: '/images/Jewelley/DSC_0020.JPG',
   },
-  {
-    id: 'dress-material',
-    name: 'Dress Material',
-    slug: 'dress-material',
-    description: 'Premium unstitched dress suit fabrics with traditional weaves',
-    image: '/images/categories/chanderi.jpg',
-  },
 ];
 
 export const PRODUCTS = [
@@ -140,13 +133,13 @@ export const PRODUCTS = [
     price: 2650,
     description: 'A classically woven Banarasi saree featuring a majestic crimson body detailed with traditional golden motifs and an elegant border.',
     fabric: 'Banarasi Silk',
-    color: 'Crimson & Gold',
+    color: 'Dark Pink and Maroon',
     occasion: 'Festive, Ceremony',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Banarasi Saree 2650--/DSC_0018 (1).jpg',
-      '/images/Saree/Banarasi Saree 2650--/DSC_0019 (1).jpg'
+      '/images/Saree/Banarasi Saree 2650--/Dark Pink and Maroon.jpg',
+      '/images/Saree/Banarasi Saree 2650--/Dark Yellow.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -162,14 +155,14 @@ export const PRODUCTS = [
     price: 3050,
     description: 'Beautifully crafted Banarasi saree set apart by its delicate gold butte work spaced gracefully across the rich green fabric and finished with a thick border.',
     fabric: 'Banarasi Silk',
-    color: 'Green & Gold',
+    color: 'Golden',
     occasion: 'Festive, Ceremony',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean recommended.',
     images: [
-      '/images/Saree/Banarasi Saree with butte 3050--/DSC_0034 (1).jpg',
-      '/images/Saree/Banarasi Saree with butte 3050--/DSC_0035 (1).jpg',
-      '/images/Saree/Banarasi Saree with butte 3050--/DSC_0036 (1).jpg'
+      '/images/Saree/Banarasi Saree with butte 3050--/Golden.jpg',
+      '/images/Saree/Banarasi Saree with butte 3050--/Pink light.jpg',
+      '/images/Saree/Banarasi Saree with butte 3050--/Purple.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -185,14 +178,14 @@ export const PRODUCTS = [
     price: 1550,
     description: 'A lightweight and breathable Jamdani saree featuring subtle floral hand-weaves. Provides an elegant and airy drape perfect for festivals and casual wear.',
     fabric: 'Jamdani Silk',
-    color: 'Off-White & Gold',
+    color: 'Multi-color',
     occasion: 'Festive, Casual',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Gentle hand wash in cold water.',
     images: [
-      '/images/Saree/Jamdani 1550--/DSC_0025 (1).jpg',
-      '/images/Saree/Jamdani 1550--/DSC_0026 (1).jpg',
-      '/images/Saree/Jamdani 1550--/DSC_0029 (1).jpg'
+      '/images/Saree/Jamdani 1550--/Multi-color.jpg',
+      '/images/Saree/Jamdani 1550--/Multi color 2.jpg',
+      '/images/Saree/Jamdani 1550--/Peacock Blue.jpg'
     ],
     featured: false,
     newArrival: false,
@@ -208,13 +201,13 @@ export const PRODUCTS = [
     price: 3050,
     description: 'A traditional Kanchi Silk Saree displaying rich color depth and handloomed check accents. Perfect choice for auspicious ceremonies and temple wear.',
     fabric: 'Kanchipuram Silk',
-    color: 'Royal Purple & Gold',
+    color: 'Purple Yellow',
     occasion: 'Wedding, Festive',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only. Store wrapped in cotton cloth.',
     images: [
-      '/images/Saree/Kanchi Silk 3050--/DSC_0010 (1).jpg',
-      '/images/Saree/Kanchi Silk 3050--/DSC_0013 (1).jpg'
+      '/images/Saree/Kanchi Silk 3050--/Purple Yellow.jpg',
+      '/images/Saree/Kanchi Silk 3050--/Multi-Color.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -230,17 +223,17 @@ export const PRODUCTS = [
     price: 3150,
     description: 'A magnificent combination of detailed Kantha embroidery and a contrasting geometric Ikat woven pallu. Adds an artistic flair to your traditional style.',
     fabric: 'Kantha Cotton Silk',
-    color: 'Multicolor Accent',
+    color: 'Black',
     occasion: 'Casual, Festive',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0045 (1).jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0058 (2) (1).jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0060 (2) (1).jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0061 (2) (1).jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0062 (1) (1).jpg',
-      '/images/Saree/Kantha with ikat pallu 3150--/DSC_0063 (1).jpg'
+      '/images/Saree/Kantha with ikat pallu 3150--/Black.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Dark Purple.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Light Blue.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Maroon.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Orange.jpg',
+      '/images/Saree/Kantha with ikat pallu 3150--/Teal.jpg'
     ],
     featured: false,
     newArrival: true,
@@ -256,12 +249,12 @@ export const PRODUCTS = [
     price: 4840,
     description: 'An elegant and translucent Kota Silk saree displaying classic checkered weave patterns and a subtle golden border that captures natural light beautifully.',
     fabric: 'Kota Silk',
-    color: 'Blue & Gold',
+    color: 'Lavender and Blue',
     occasion: 'Festive, Puja',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Gentle hand wash. Iron on low heat.',
     images: [
-      '/images/Saree/Kota Silk 4840--/DSC_0058 (1).jpg'
+      '/images/Saree/Kota Silk 4840--/Lavender and Blue.jpg'
     ],
     featured: false,
     newArrival: false,
@@ -277,15 +270,15 @@ export const PRODUCTS = [
     price: 1550,
     description: 'A dreamy, lightweight organza saree detailed with floral patterns and a delicate silver trim. Its sheer fabric makes it elegant for day-to-night styling.',
     fabric: 'Organza',
-    color: 'Pink & Silver',
+    color: 'Sky Blue',
     occasion: 'Party, Festive',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean recommended.',
     images: [
-      '/images/Saree/Organza Saree 1550--/DSC_0040 (1).jpg',
-      '/images/Saree/Organza Saree 1550--/DSC_0041 (1).jpg',
-      '/images/Saree/Organza Saree 1550--/DSC_0042 (1).jpg',
-      '/images/Saree/Organza Saree 1550--/DSC_0043 (1).jpg'
+      '/images/Saree/Organza Saree 1550--/Sky Blue.jpg',
+      '/images/Saree/Organza Saree 1550--/Golden Off white.jpg',
+      '/images/Saree/Organza Saree 1550--/Peach.jpg',
+      '/images/Saree/Organza Saree 1550--/Pista.jpg'
     ],
     featured: true,
     newArrival: false,
@@ -301,12 +294,12 @@ export const PRODUCTS = [
     price: 4850,
     description: 'A lightweight and breathable Chanderi Cotton Saree in pure ivory. Accented with subtle golden thread borders to bring a clean, dignified look.',
     fabric: 'Chanderi Cotton',
-    color: 'Ivory & Gold',
+    color: 'pink (dusty rose) and Orange',
     occasion: 'Puja, Festive',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Hand wash gently. Hang to dry.',
     images: [
-      '/images/Saree/Pure Chanderi Cotton 4850--/DSC_0055 (1).jpg'
+      '/images/Saree/Pure Chanderi Cotton 4850--/pink (dusty rose) and Orange.jpg'
     ],
     featured: false,
     newArrival: false,
@@ -319,15 +312,15 @@ export const PRODUCTS = [
     slug: 'pure-jamdani-silk-saree-folder',
     sku: 'BLM-SAR-PUREJAMDANI',
     category: 'saree',
-    price: null, // Price not mentioned, leave blank
+    price: null,
     description: 'A luxurious pure Jamdani silk saree of spectacular quality, handwoven with delicate traditional motifs. Elegant drape that feels soft and regal.',
     fabric: 'Pure Jamdani Silk',
-    color: 'Magenta',
+    color: 'teal peacock green',
     occasion: 'Festive, Reception',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Pure Jamdani Silk Sarees/DSC_0060 (1).jpg'
+      '/images/Saree/Pure Jamdani Silk Sarees/teal_peacock green.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -343,13 +336,13 @@ export const PRODUCTS = [
     price: 13550,
     description: 'An premium handloomed Banarasi Kora silk saree. Extremely fine sheer silk fabric woven with premium zari structures, ideal for brides and receptions.',
     fabric: 'Banarasi Kora Silk',
-    color: 'Pastel Peach & Gold',
+    color: 'Golden bronze',
     occasion: 'Wedding, Reception',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only. Handle with care.',
     images: [
-      '/images/Saree/Pure silk banarasi kora 13550--/DSC_0061 (1).jpg',
-      '/images/Saree/Pure silk banarasi kora 13550--/DSC_0065 (1).jpg'
+      '/images/Saree/Pure silk banarasi kora 13550--/Golden_bronze.jpg',
+      '/images/Saree/Pure silk banarasi kora 13550--/Silver_grey.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -365,16 +358,16 @@ export const PRODUCTS = [
     price: 2950,
     description: 'A semi-raw silk saree with a rustic, textured body and a rich teal pallu. Perfect balance of traditional weaving and modern design.',
     fabric: 'Semi Raw Silk',
-    color: 'Mustard & Teal',
+    color: 'Light Blue',
     occasion: 'Festive, Puja',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean recommended.',
     images: [
-      '/images/Saree/Semi Raw Silk 2950--/DSC_0017 (1).jpg',
-      '/images/Saree/Semi Raw Silk 2950--/DSC_0065 (2) (1).jpg',
-      '/images/Saree/Semi Raw Silk 2950--/DSC_0065 (2).JPG',
-      '/images/Saree/Semi Raw Silk 2950--/DSC_0070 (1).jpg',
-      '/images/Saree/Semi Raw Silk 2950--/DSC_0071 (1).jpg'
+      '/images/Saree/Semi Raw Silk 2950--/Light Blue.jpg',
+      '/images/Saree/Semi Raw Silk 2950--/Blue.jpg',
+      '/images/Saree/Semi Raw Silk 2950--/Maroon Red.jpg',
+      '/images/Saree/Semi Raw Silk 2950--/Purple.jpg',
+      '/images/Saree/Semi Raw Silk 2950--/DSC_0065 (2).JPG'
     ],
     featured: false,
     newArrival: false,
@@ -390,15 +383,15 @@ export const PRODUCTS = [
     price: 2950,
     description: 'An incredibly soft raw silk saree dyed in elegant teal blue. Displays a soft sheen and drapes easily for all-day comfort during family ceremonies.',
     fabric: 'Soft Raw Silk',
-    color: 'Teal Blue',
+    color: 'Sea green',
     occasion: 'Festive, Ceremony',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Soft raw silk 2950--/DSC_0044 (1).jpg',
-      '/images/Saree/Soft raw silk 2950--/DSC_0073 (1).jpg',
-      '/images/Saree/Soft raw silk 2950--/DSC_0074 (1).jpg',
-      '/images/Saree/Soft raw silk 2950--/DSC_0075 (1).jpg'
+      '/images/Saree/Soft raw silk 2950--/Sea green.jpg',
+      '/images/Saree/Soft raw silk 2950--/Grey.jpg',
+      '/images/Saree/Soft raw silk 2950--/Yellow.jpg',
+      '/images/Saree/Soft raw silk 2950--/Yellow_2.jpg'
     ],
     featured: false,
     newArrival: false,
@@ -414,14 +407,14 @@ export const PRODUCTS = [
     price: 6150,
     description: 'A grand Tasar Paithani silk saree featuring the classic handwoven peacock border and a rich golden pallu that shines at weddings.',
     fabric: 'Tasar Paithani Silk',
-    color: 'Orange & Green',
+    color: 'Sky Blue Azure Blue',
     occasion: 'Wedding, Traditional',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Tasar Paithani 6150--/DSC_0020 (1).jpg',
-      '/images/Saree/Tasar Paithani 6150--/DSC_0068 (1).jpg',
-      '/images/Saree/Tasar Paithani 6150--/DSC_0069 (1).jpg'
+      '/images/Saree/Tasar Paithani 6150--/Sky Blue  Azure Blue.jpg',
+      '/images/Saree/Tasar Paithani 6150--/Beige  Mushroom Grey.jpg',
+      '/images/Saree/Tasar Paithani 6150--/Royal Blue  Indigo (1).jpg'
     ],
     featured: true,
     newArrival: false,
@@ -434,19 +427,19 @@ export const PRODUCTS = [
     slug: 'tasar-saree-with-banarasi-pallu',
     sku: 'BLM-SAR-TASARBANARASI',
     category: 'saree',
-    price: null, // Price not mentioned, leave blank
+    price: null,
     description: 'An elegant beige Tasar silk saree decorated with a contrasting maroon Banarasi woven pallu. The ideal combination of two magnificent textures.',
     fabric: 'Tasar Silk',
-    color: 'Beige & Maroon',
+    color: 'Peacock Blue Teal Blue',
     occasion: 'Traditional, Festive',
     length: '6.3 meters (with blouse piece)',
     careInstructions: 'Dry clean only.',
     images: [
-      '/images/Saree/Tasar saree with banarasi pallu_/DSC_0048 (1).jpg',
-      '/images/Saree/Tasar saree with banarasi pallu_/DSC_0049 (1).jpg',
-      '/images/Saree/Tasar saree with banarasi pallu_/DSC_0050 (1).jpg',
-      '/images/Saree/Tasar saree with banarasi pallu_/DSC_0051 (1).jpg',
-      '/images/Saree/Tasar saree with banarasi pallu_/DSC_0052 (1).jpg'
+      '/images/Saree/Tasar saree with banarasi pallu_/Peacock Blue  Teal Blue.jpg',
+      '/images/Saree/Tasar saree with banarasi pallu_/Copper Brown.jpg',
+      '/images/Saree/Tasar saree with banarasi pallu_/Deep Purple  Violet.jpg',
+      '/images/Saree/Tasar saree with banarasi pallu_/Emerald Green  Dark Teal.jpg',
+      '/images/Saree/Tasar saree with banarasi pallu_/Magenta  Fuchsia.jpg'
     ],
     featured: false,
     newArrival: true,
@@ -808,52 +801,55 @@ export const PRODUCTS = [
     stock: 3,
     active: true,
   },
-
-  // --- DRESS MATERIALS ---
-  {
-    id: 36,
-    name: 'Banarasi Katan Silk Suit Set',
-    slug: 'banarasi-katan-silk-suit-set',
-    sku: 'BLM-DSM-001',
-    category: 'dress-material',
-    price: 9500,
-    description: 'A premium unstitched 3-piece salwar suit material set. Features a rich handloomed Katan silk top with all-over zari butas, plain silk bottom fabric, and a heavy woven Banarasi dupatta.',
-    fabric: 'Katan Silk',
-    color: 'Deep Teal & Royal Blue',
-    occasion: 'Festive, Puja, Reception',
-    length: 'Top: 2.5m, Bottom: 2.5m, Dupatta: 2.3m',
-    careInstructions: 'Dry clean only.',
-    images: ['/images/products/dress-1-b.jpg'],
-    featured: true,
-    newArrival: true,
-    stock: 5,
-    active: true,
-  },
-  {
-    id: 37,
-    name: 'Indigo Hand-Block Cotton Suit Set',
-    slug: 'indigo-hand-block-cotton-suit-set',
-    sku: 'BLM-DSM-002',
-    category: 'dress-material',
-    price: 3400,
-    description: 'Comfortable unstitched pure cotton dress fabric set, featuring authentic Ajrakh indigo hand-block prints. Comes with a block-printed bottom fabric and a lightweight cotton mulmul printed dupatta.',
-    fabric: 'Organic Cotton',
-    color: 'Indigo Blue & Madder Red',
-    occasion: 'Casual Wear, Office wear',
-    length: 'Top: 2.5m, Bottom: 2.5m, Dupatta: 2.5m',
-    careInstructions: 'Wash separately in cold water with mild detergent. Line dry in shade.',
-    images: ['/images/products/dress-2-b.jpg'],
-    featured: false,
-    newArrival: false,
-    stock: 20,
-    active: true,
-  },
 ];
 
 export const WHATSAPP_NUMBER = 'XXXXXXX';
 
-export function getWhatsAppUrl(product) {
-  const message = `Hi Bellissima! I would like to buy *${product.name}* (SKU: ${product.sku}) from Bellissima. Could you please let me know how to proceed?`;
+export function getProductVariantInfo(product, selectedImageIndex = 0) {
+  const imageUrl = product.images && product.images[selectedImageIndex];
+  if (!imageUrl) {
+    return { name: product.name, color: product.color };
+  }
+
+  // Get the file name without extension
+  const filenameWithExt = imageUrl.substring(imageUrl.lastIndexOf('/') + 1);
+  const filename = filenameWithExt.substring(0, filenameWithExt.lastIndexOf('.'));
+
+  // If the filename starts with DSC_ (like DSC_0065 (2)) or similar non-descriptive names, fallback
+  if (filename.toUpperCase().startsWith('DSC_') || /^\d+$/.test(filename) || filename.toUpperCase().startsWith('HERO-')) {
+    return { name: product.name, color: product.color };
+  }
+
+  // Extract color name
+  let colorName = filename
+    .replace(/_/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // Strip trailing " (1)" or similar copy counters in filenames
+  colorName = colorName.replace(/\(\d+\)/g, '').trim();
+
+  // Make the first letter of each word uppercase
+  colorName = colorName
+    .split(' ')
+    .map(word => {
+      if (!word) return '';
+      if (word.startsWith('(')) {
+        return '(' + word.charAt(1).toUpperCase() + word.slice(2);
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .filter(Boolean)
+    .join(' ');
+
+  const variantName = `${product.name} - ${colorName}`;
+
+  return { name: variantName, color: colorName };
+}
+
+export function getWhatsAppUrl(product, selectedImageIndex = 0) {
+  const variantInfo = getProductVariantInfo(product, selectedImageIndex);
+  const message = `Hi Bellissima! I would like to buy *${variantInfo.name}* (SKU: ${product.sku}) from Bellissima. Could you please let me know how to proceed?`;
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
@@ -869,6 +865,5 @@ export function formatPrice(price) {
 
 export function getStockStatus(stock) {
   if (stock === 0) return { label: 'Out of Stock', color: 'text-gray-400', bg: 'bg-gray-100', dot: 'bg-gray-400' };
-  if (stock <= 5) return { label: `Only ${stock} left`, color: 'text-amber-600', bg: 'bg-amber-50', dot: 'bg-amber-500' };
   return { label: 'In Stock', color: 'text-emerald-600', bg: 'bg-emerald-50', dot: 'bg-emerald-500' };
 }
