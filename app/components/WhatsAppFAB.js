@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const WHATSAPP_NUMBER = 'XXXXXXX';
+const WHATSAPP_NUMBER = '919112122645';
 const DEFAULT_MESSAGE = "Hi Bellissima! I'm interested in Bellissima collections. Could you help me with your latest designs?";
 
 export default function WhatsAppFAB() {

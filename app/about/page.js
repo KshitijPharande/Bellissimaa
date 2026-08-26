@@ -163,7 +163,7 @@ export default function AboutPage() {
               </div>
 
               <a
-                href="https://wa.me/XXXXXXX?text=Hi!%20I'd%20love%20to%20know%20more%20about%20Bellissima."
+                href="https://wa.me/919112122645?text=Hi!%20I'd%20love%20to%20know%20more%20about%20Bellissima."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-10 text-sm tracking-[0.2em] uppercase text-gold border border-gold/40 px-10 py-4 hover:bg-gold/10 transition-all duration-300 group font-medium"
@@ -308,7 +308,7 @@ export default function AboutPage() {
               </span>
             </Link>
             <a
-              href="https://wa.me/XXXXXXX?text=Hi!%20I'd%20love%20to%20explore%20your%20saree%20collection."
+              href="https://wa.me/919112122645?text=Hi!%20I'd%20love%20to%20explore%20your%20saree%20collection."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-4 text-sm tracking-[0.2em] uppercase text-white/80 border border-white/20 hover:border-gold/50 hover:text-gold transition-all duration-300"

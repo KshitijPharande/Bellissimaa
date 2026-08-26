@@ -32,7 +32,7 @@ const RAW_PRODUCTS = [
     slug: 'pure-gadwal-peacock-blue-saree',
     sku: 'BLM-SAR-092',
     category: 'saree',
-    price: 14500,
+    price: 19750,
     description: 'A gorgeous 9-inch border pure Gadwal saree in an exquisite peacock blue and navy blue color combination. Handloomed with premium silk and featuring a heavy zari border and pallu.',
     fabric: 'Pure Gadwal Silk',
     color: 'Peacock Blue & Navy Blue',
@@ -56,7 +56,7 @@ const RAW_PRODUCTS = [
     slug: 'pure-jamdani-silk-saree',
     sku: 'BLM-SAR-049',
     category: 'saree',
-    price: 12800,
+    price: 9850,
     description: 'An elegant pure Jamdani silk saree in beautiful pink, featuring delicate hand-woven floral motifs throughout the body. Exceedingly lightweight with a sophisticated drape.',
     fabric: 'Pure Jamdani Silk',
     color: 'Pink',
@@ -104,7 +104,7 @@ const RAW_PRODUCTS = [
     slug: 'cotton-silk-maheshwari-saree',
     sku: 'BLM-SAR-041',
     category: 'saree',
-    price: 6200,
+    price: 2850,
     description: 'A classic Cotton Silk Maheshwari saree in pink with a signature border. Blends the breathability of fine cotton with the natural sheen and elegance of silk.',
     fabric: 'Cotton Silk Maheshwari',
     color: 'Pink',
@@ -324,7 +324,7 @@ const RAW_PRODUCTS = [
     slug: 'pure-jamdani-silk-saree-folder',
     sku: 'BLM-SAR-PUREJAMDANI',
     category: 'saree',
-    price: null,
+    price: 9850,
     description: 'A luxurious pure Jamdani silk saree of spectacular quality, handwoven with delicate traditional motifs. Elegant drape that feels soft and regal.',
     fabric: 'Pure Jamdani Silk',
     color: 'teal peacock green',
@@ -439,7 +439,7 @@ const RAW_PRODUCTS = [
     slug: 'tasar-saree-with-banarasi-pallu',
     sku: 'BLM-SAR-TASARBANARASI',
     category: 'saree',
-    price: null,
+    price: 3350,
     description: 'An elegant beige Tasar silk saree decorated with a contrasting maroon Banarasi woven pallu. The ideal combination of two magnificent textures.',
     fabric: 'Tasar Silk',
     color: 'Peacock Blue Teal Blue',
@@ -459,15 +459,15 @@ const RAW_PRODUCTS = [
     active: true,
   },
 
-  // --- HANDBAGS & POTLIS ---
+  // --- HANDBAGS & POTLIS (Each individual file as its own separate product) ---
   {
     id: 19,
     name: 'Bridal Bindal Potli',
     slug: 'bridal-bindal-potli',
     sku: 'BLM-HBG-029',
     category: 'handbag',
-    price: 2400,
-    description: 'A luxurious handcrafted bridal potli bag featuring beautiful gold thread embroidery, dense bead embellishments, and dynamic hanging pearl drawstrings. Available in stunning gold, ivory, and crimson colorways.',
+    price: 1550,
+    description: 'A luxurious handcrafted bridal potli bag featuring beautiful gold thread embroidery, dense bead embellishments, and dynamic hanging pearl drawstrings.',
     fabric: 'Silk Velvet & Beads',
     color: 'Gold',
     occasion: 'Bridal, Wedding, Festive',
@@ -483,44 +483,144 @@ const RAW_PRODUCTS = [
   },
   {
     id: 20,
-    name: 'Indo Western Functional Handbag',
-    slug: 'indo-western-functional-handbag',
-    sku: 'BLM-HBG-036',
+    name: 'Indo Western Functional Handbag - Style A',
+    slug: 'indo-western-functional-handbag-a',
+    sku: 'BLM-HBG-030',
     category: 'handbag',
     price: 3200,
     description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
     fabric: 'Brocade & Silk',
-    color: 'Multicolor Designer',
+    color: 'Teal & Gold Pattern',
     occasion: 'Casual, Semi-Formal, Festive',
     length: '10.5" x 7.0" x 3.0"',
     careInstructions: 'Dry clean recommended.',
     images: [
-      '/images/Purse/DSC_0030.jpg',
-      '/images/Purse/DSC_0031.jpg',
-      '/images/Purse/DSC_0033.jpg',
-      '/images/Purse/DSC_0034.jpg',
-      '/images/Purse/DSC_0038.jpg'
+      '/images/Purse/DSC_0030.jpg'
     ],
     featured: false,
     newArrival: true,
-    stock: 10,
+    stock: 4,
     active: true,
   },
   {
     id: 21,
-    name: 'Elegant Embroidered Velvet Clutch Set',
-    slug: 'elegant-embroidered-velvet-clutch-set',
+    name: 'Indo Western Functional Handbag - Style B',
+    slug: 'indo-western-functional-handbag-b',
+    sku: 'BLM-HBG-031',
+    category: 'handbag',
+    price: 3200,
+    description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
+    fabric: 'Brocade & Silk',
+    color: 'Blue-Grey Pattern',
+    occasion: 'Casual, Semi-Formal, Festive',
+    length: '10.5" x 7.0" x 3.0"',
+    careInstructions: 'Dry clean recommended.',
+    images: [
+      '/images/Purse/DSC_0031.jpg'
+    ],
+    featured: false,
+    newArrival: true,
+    stock: 0,
+    active: true,
+  },
+  {
+    id: 22,
+    name: 'Indo Western Functional Handbag - Style C',
+    slug: 'indo-western-functional-handbag-c',
+    sku: 'BLM-HBG-033',
+    category: 'handbag',
+    price: 3200,
+    description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
+    fabric: 'Brocade & Silk',
+    color: 'Crimson Pattern',
+    occasion: 'Casual, Semi-Formal, Festive',
+    length: '10.5" x 7.0" x 3.0"',
+    careInstructions: 'Dry clean recommended.',
+    images: [
+      '/images/Purse/DSC_0033.jpg'
+    ],
+    featured: false,
+    newArrival: true,
+    stock: 5,
+    active: true,
+  },
+  {
+    id: 23,
+    name: 'Indo Western Functional Handbag - Style D',
+    slug: 'indo-western-functional-handbag-d',
+    sku: 'BLM-HBG-034',
+    category: 'handbag',
+    price: 3200,
+    description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
+    fabric: 'Brocade & Silk',
+    color: 'Emerald & Gold Pattern',
+    occasion: 'Casual, Semi-Formal, Festive',
+    length: '10.5" x 7.0" x 3.0"',
+    careInstructions: 'Dry clean recommended.',
+    images: [
+      '/images/Purse/DSC_0034.jpg'
+    ],
+    featured: false,
+    newArrival: true,
+    stock: 6,
+    active: true,
+  },
+  {
+    id: 24,
+    name: 'Indo Western Functional Handbag - Style E',
+    slug: 'indo-western-functional-handbag-e',
+    sku: 'BLM-HBG-038',
+    category: 'handbag',
+    price: 3200,
+    description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
+    fabric: 'Brocade & Silk',
+    color: 'Multicolor Accent Pattern',
+    occasion: 'Casual, Semi-Formal, Festive',
+    length: '10.5" x 7.0" x 3.0"',
+    careInstructions: 'Dry clean recommended.',
+    images: [
+      '/images/Purse/DSC_0038.jpg'
+    ],
+    featured: false,
+    newArrival: true,
+    stock: 5,
+    active: true,
+  },
+  {
+    id: 25,
+    name: 'Pink Velvet Clutch with Sling',
+    slug: 'pink-velvet-clutch-with-sling',
     sku: 'BLM-HBG-041',
     category: 'handbag',
-    price: 2800,
-    description: 'A gorgeous embroidered velvet clutch set with multi-functional pockets, structured contours, and detachable metallic slings.',
+    price: 950,
+    description: 'A gorgeous pink velvet clutch detailed with delicate embroidery, structured contours, multi-functional pockets, and a detachable metallic chain sling.',
     fabric: 'Velvet',
-    color: 'Pink & Crimson',
+    color: 'Pink',
     occasion: 'Festive, Party, Reception',
     length: '9.5" x 5.5" x 2.0"',
     careInstructions: 'Spot clean only.',
     images: [
-      '/images/Purse/DSC_0041.jpg',
+      '/images/Purse/DSC_0041.jpg'
+    ],
+    featured: true,
+    newArrival: true,
+    stock: 4,
+    active: true,
+  },
+  {
+    id: 26,
+    name: 'Functional Red Velvet Clutch with Sling',
+    slug: 'functional-red-velvet-clutch-with-sling',
+    sku: 'BLM-HBG-043',
+    category: 'handbag',
+    price: 1550,
+    description: 'A sleek and functional red velvet clutch adorned with beautiful ethnic embroidery. Features multiple compartments and a detachable metallic sling chain.',
+    fabric: 'Velvet',
+    color: 'Red',
+    occasion: 'Festive, Party, Reception',
+    length: '9.5" x 5.5" x 2.0"',
+    careInstructions: 'Spot clean only.',
+    images: [
       '/images/Purse/DSC_0043.jpg'
     ],
     featured: true,
@@ -531,7 +631,7 @@ const RAW_PRODUCTS = [
 
   // --- JEWELLERY ---
   {
-    id: 22,
+    id: 27,
     name: 'Ethnic AD Earrings',
     slug: 'ethnic-ad-earrings',
     sku: 'BLM-JWL-024',
@@ -550,7 +650,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 23,
+    id: 28,
     name: 'Ethnic Jewellery with Beads',
     slug: 'ethnic-jewellery-with-beads',
     sku: 'BLM-JWL-020',
@@ -572,7 +672,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 24,
+    id: 29,
     name: 'Elegant Pearl Jewellery Set',
     slug: 'elegant-pearl-jewellery-set',
     sku: 'BLM-JWL-019',
@@ -594,7 +694,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 25,
+    id: 30,
     name: 'Beaded Festive Choker Set',
     slug: 'beaded-festive-choker-set',
     sku: 'BLM-JWL-017',
@@ -613,7 +713,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 26,
+    id: 31,
     name: 'Contemporary Indo Western Necklace Set',
     slug: 'contemporary-indo-western-necklace-set',
     sku: 'BLM-JWL-015',
@@ -635,7 +735,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 27,
+    id: 32,
     name: 'Ethnic Single Line Gold Chain Necklace',
     slug: 'ethnic-single-line-gold-chain-necklace',
     sku: 'BLM-JWL-014',
@@ -654,7 +754,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 28,
+    id: 33,
     name: 'Ethnic 3-Layer Jondhale Pot',
     slug: 'ethnic-3-layer-jondhale-pot',
     sku: 'BLM-JWL-013',
@@ -673,7 +773,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 29,
+    id: 34,
     name: 'Contemporary Elegant Jewellery Set',
     slug: 'contemporary-elegant-jewellery-set',
     sku: 'BLM-JWL-012',
@@ -697,7 +797,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 30,
+    id: 35,
     name: 'Precious Stone Jewellery Set',
     slug: 'precious-stone-jewellery-set',
     sku: 'BLM-JWL-010',
@@ -716,7 +816,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 31,
+    id: 36,
     name: 'Ethnic AD Necklace Set',
     slug: 'ethnic-ad-necklace-set',
     sku: 'BLM-JWL-007',
@@ -726,7 +826,7 @@ const RAW_PRODUCTS = [
     fabric: 'American Diamond & Alloy',
     color: 'Sparkling White & Gold',
     occasion: 'Wedding, Festive, Reception',
-    length: 'Adjustable Neck Size',
+    length: 'Adjust0able Neck Size',
     careInstructions: 'Keep in airtight jewelry cover.',
     images: [
       '/images/Jewelley/DSC_0007.JPG',
@@ -738,7 +838,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 32,
+    id: 37,
     name: 'AD Necklace with Pearl Drops',
     slug: 'ad-necklace-with-pearl-drops',
     sku: 'BLM-JWL-006',
@@ -757,7 +857,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 33,
+    id: 38,
     name: 'Ethnic Antique Gold Necklace Set',
     slug: 'ethnic-antique-gold-necklace-set',
     sku: 'BLM-JWL-005',
@@ -776,7 +876,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 34,
+    id: 39,
     name: 'Fashion Necklace Set with AD',
     slug: 'fashion-necklace-set-with-ad',
     sku: 'BLM-JWL-004',
@@ -795,7 +895,7 @@ const RAW_PRODUCTS = [
     active: true,
   },
   {
-    id: 35,
+    id: 40,
     name: 'Ethnic AD into Western Fusion Necklace Set',
     slug: 'ethnic-ad-into-western-fusion-necklace-set',
     sku: 'BLM-JWL-0001',
@@ -815,7 +915,7 @@ const RAW_PRODUCTS = [
   },
 ];
 
-export const WHATSAPP_NUMBER = 'XXXXXXX';
+export const WHATSAPP_NUMBER = '919112122645';
 
 export function getProductVariantInfo(product, selectedImageIndex = 0) {
   const imageUrl = product.images && product.images[selectedImageIndex];

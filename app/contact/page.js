@@ -99,7 +99,7 @@ export default function ContactPage() {
               >
                 {/* WhatsApp */}
                 <motion.a
-                  href="https://wa.me/XXXXXXX?text=Hi!%20I%20have%20a%20question%20about%20Bellissima."
+                  href="https://wa.me/919112122645?text=Hi!%20I%20have%20a%20question%20about%20Bellissima."
                   target="_blank"
                   rel="noopener noreferrer"
                   id="contact-whatsapp"
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <h3 className="text-sm font-semibold text-charcoal mb-1">
                       WhatsApp (Preferred)
                     </h3>
-                    <p className="text-sm text-charcoal/50">XXXXXXX</p>
+                    <p className="text-sm text-charcoal/50">+91 91121 22645</p>
                     <p className="text-xs text-[#25D366] mt-1 font-semibold">
                       Typically replies within minutes →
                     </p>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-charcoal mb-1">Phone</h3>
-                    <p className="text-sm text-charcoal/50">XXXXXXX</p>
+                    <p className="text-sm text-charcoal/50">+91 91121 22645</p>
                     <p className="text-xs text-charcoal/40 mt-1">Mon – Sat, 10 AM – 7 PM</p>
                   </div>
                 </motion.div>
