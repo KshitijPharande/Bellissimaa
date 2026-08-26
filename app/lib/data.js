@@ -567,17 +567,17 @@ const RAW_PRODUCTS = [
   },
   {
     id: 24,
-    name: 'Indo Western Functional Handbag - Style E',
-    slug: 'indo-western-functional-handbag-e',
+    name: 'Functional Green Velvet Clutch with Sling',
+    slug: 'functional-green-velvet-clutch-with-sling',
     sku: 'BLM-HBG-038',
     category: 'handbag',
     price: 3200,
-    description: 'A stylish and versatile functional handbag designed for modern wardrobe styling. Reimagines traditional patterns in a contemporary layout.',
-    fabric: 'Brocade & Silk',
-    color: 'Multicolor Accent Pattern',
-    occasion: 'Casual, Semi-Formal, Festive',
-    length: '10.5" x 7.0" x 3.0"',
-    careInstructions: 'Dry clean recommended.',
+    description: 'A gorgeous green velvet clutch detailed with delicate embroidery, structured contours, multi-functional pockets, and a detachable metallic chain sling.',
+    fabric: 'Velvet',
+    color: 'Green',
+    occasion: 'Festive, Party, Reception',
+    length: '9.5" x 5.5" x 2.0"',
+    careInstructions: 'Spot clean only.',
     images: [
       '/images/Purse/DSC_0038.jpg'
     ],
@@ -600,7 +600,7 @@ const RAW_PRODUCTS = [
     length: '9.5" x 5.5" x 2.0"',
     careInstructions: 'Spot clean only.',
     images: [
-      '/images/Purse/DSC_0041.jpg'
+      '/images/Purse/DSC_0043.jpg'
     ],
     featured: true,
     newArrival: true,
@@ -621,7 +621,7 @@ const RAW_PRODUCTS = [
     length: '9.5" x 5.5" x 2.0"',
     careInstructions: 'Spot clean only.',
     images: [
-      '/images/Purse/DSC_0043.jpg'
+      '/images/Purse/DSC_0041.jpg'
     ],
     featured: true,
     newArrival: true,
