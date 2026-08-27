@@ -1,22 +1,8 @@
-import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppFAB from "./components/WhatsAppFAB";
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair-display",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-});
+import LaunchOverlay from "./components/LaunchOverlay";
 
 export const metadata = {
   title: {
@@ -55,9 +41,10 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${dmSans.variable} h-full antialiased scroll-smooth`}
+      className="h-full antialiased scroll-smooth"
     >
       <body className="min-h-full flex flex-col font-[family-name:var(--font-body)]">
+        <LaunchOverlay />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

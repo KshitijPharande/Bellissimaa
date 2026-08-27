@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+
+:root {
+  --font-playfair-display: 'Playfair Display', 'Didot', 'Georgia', serif;
+  --font-dm-sans: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
 
 /* ============================================
    BELLISSIMA — Global Design System
