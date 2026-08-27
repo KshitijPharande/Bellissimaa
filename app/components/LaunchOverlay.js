@@ -9,19 +9,22 @@ export default function LaunchOverlay() {
   const [isLaunching, setIsLaunching] = useState(false);
 
   useEffect(() => {
-    // Check if the site was already launched in this browser session
+    // Check if ?preview=true query parameter is present, or if it hasn't been launched yet
+    const isPreviewMode = window.location.search.includes('preview=true');
     const status = localStorage.getItem('bellissima_launched');
-    if (status !== 'true') {
+    
+    if (status !== 'true' || isPreviewMode) {
       setIsLaunched(false);
     }
   }, []);
 
   const handleLaunch = () => {
     setIsLaunching(true);
-    // Wait for the exit animation to complete before removing from DOM
+    // Wait for the exit animation to complete before removing from DOM and redirecting
     setTimeout(() => {
       localStorage.setItem('bellissima_launched', 'true');
       setIsLaunched(true);
+      window.location.href = "https://www.bellissimaboutique.in/";
     }, 1200);
   };
 
@@ -45,7 +48,7 @@ export default function LaunchOverlay() {
           {/* Luxury Frame Border */}
           <div className="absolute inset-8 border border-gold/20 pointer-events-none flex items-center justify-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-4 text-[10px] tracking-[0.3em] text-gold font-medium">
-              EST. 2026
+              EST. 2014
             </div>
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white px-4 text-[10px] tracking-[0.3em] text-gold font-medium">
               HANDLOOMED WITH LOVE

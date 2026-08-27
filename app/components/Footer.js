@@ -107,11 +107,24 @@ export default function Footer() {
         </div>
 
         {/* Bottom Divider */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30 tracking-wider">
-            © {new Date().getFullYear()} Bellissima. All rights reserved.
-          </p>
-          <p className="text-xs text-white/20 tracking-wider">
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <p className="text-xs text-white/30 tracking-wider">
+              © {new Date().getFullYear()} Bellissima. All rights reserved.
+            </p>
+            <p className="text-xs text-white/30 tracking-wider">
+              Designed & Developed by{' '}
+              <a
+                href="https://www.lynkdigital.co.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:text-gold-light transition-all duration-300 font-medium inline-block"
+              >
+                LynkDigital
+              </a>
+            </p>
+          </div>
+          <p className="text-xs text-white/20 tracking-wider sm:pr-24">
             Crafted with ♡ in Pune
           </p>
         </div>
