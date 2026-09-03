@@ -86,7 +86,7 @@ export default function ContactPage() {
               </h2>
               <p className="text-charcoal/60 leading-relaxed mb-10">
                 Whether you have a question about our handcrafted saree collections, need personalized styling advice, 
-                or wish to connect with Bellissima Boutique in Pune — we&apos;re here for you. We personally 
+                or wish to connect with Bellissima Boutique in Pune, we&apos;re here for you. We personally 
                 respond to every inquiry.
               </p>
 

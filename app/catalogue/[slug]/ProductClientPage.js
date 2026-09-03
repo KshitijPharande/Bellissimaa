@@ -114,7 +114,7 @@ export default function ProductClientPage({ slug }) {
                   >
                     <Image
                       src={product.images[selectedImage]}
-                      alt={`Bellissima Boutique Pune — ${variantName || product.name} view ${selectedImage + 1}`}
+                      alt={`Bellissima Boutique Pune - ${variantName || product.name} view ${selectedImage + 1}`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className={`object-contain ${isOutOfStock ? 'grayscale' : ''}`}
@@ -147,7 +147,7 @@ export default function ProductClientPage({ slug }) {
                     >
                       <Image
                         src={img}
-                        alt={`Bellissima Boutique Pune — ${product.name} thumbnail ${i + 1}`}
+                        alt={`Bellissima Boutique Pune - ${product.name} thumbnail ${i + 1}`}
                         fill
                         sizes="80px"
                         className="object-cover"
@@ -317,7 +317,7 @@ export default function ProductClientPage({ slug }) {
                       <div className="relative aspect-[3/4] overflow-hidden bg-ivory mb-3.5 shadow-[0_4px_20px_rgba(0,0,0,0.01)]">
                         <Image
                           src={p.images[0]}
-                          alt={`Bellissima Boutique Pune — ${p.name || 'Ethnic Wear'}`}
+                          alt={`Bellissima Boutique Pune - ${p.name || 'Ethnic Wear'}`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                           className={`object-cover transition-transform duration-[1s] ${
@@ -330,9 +330,9 @@ export default function ProductClientPage({ slug }) {
                           </span>
                         )}
                       </div>
-                      <h3 className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1 font-medium">
+                      <p className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1 font-medium">
                         {p.name}
-                      </h3>
+                      </p>
                       <p className="text-sm text-charcoal/70 mt-1 font-semibold">{formatPrice(p.price)}</p>
                     </Link>
                   </motion.div>
@@ -407,7 +407,7 @@ export default function ProductClientPage({ slug }) {
             >
               <Image
                 src={product.images[selectedImage]}
-                alt={`Bellissima Boutique Pune — ${product.name} full preview`}
+                alt={`Bellissima Boutique Pune - ${product.name} full preview`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 800px"
                 className="object-contain"

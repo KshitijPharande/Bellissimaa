@@ -61,6 +61,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    rel="nofollow"
                     className="text-sm text-white/50 hover:text-gold transition-colors duration-300 tracking-wide"
                   >
                     {link.label}

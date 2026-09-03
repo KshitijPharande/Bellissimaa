@@ -578,7 +578,7 @@ function FilterPanel({
             onChange={(e) => setPriceRange((p) => ({ ...p, min: e.target.value }))}
             className="w-full text-sm border border-charcoal/20 bg-transparent px-3 py-2 focus:outline-none focus:border-gold placeholder:text-charcoal/30"
           />
-          <span className="text-charcoal/30">—</span>
+          <span className="text-charcoal/30">-</span>
           <input
             type="number"
             placeholder="Max"
@@ -634,7 +634,7 @@ function CatalogueCard({ product }) {
         <div className="relative aspect-[3/4] overflow-hidden bg-white mb-3.5 shadow-[0_4px_25px_rgba(0,0,0,0.01)]">
           <Image
             src={product.images[0]}
-            alt={`Bellissima Boutique Pune — ${product.name || 'Ethnic Saree'}`}
+            alt={`Bellissima Boutique Pune - ${product.name || 'Ethnic Saree'}`}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={`object-contain transition-transform duration-[1s] ${
@@ -670,9 +670,9 @@ function CatalogueCard({ product }) {
         <p className="text-[10px] text-gold tracking-[0.15em] uppercase mb-1 font-semibold">
           {CATEGORIES.find((c) => c.slug === product.category)?.name}
         </p>
-        <h3 className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1 font-medium">
+        <p className="text-sm font-[family-name:var(--font-heading)] text-charcoal group-hover:text-gold transition-colors duration-300 line-clamp-1 font-medium">
           {product.name}
-        </h3>
+        </p>
         <div className="flex items-center justify-between mt-2">
           <p className="text-sm font-semibold text-charcoal">
             {formatPrice(product.price)}

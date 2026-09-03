@@ -6,7 +6,7 @@ import WhatsAppFAB from "./components/WhatsAppFAB";
 export const metadata = {
   metadataBase: new URL("https://www.bellissimaboutique.in"),
   title: {
-    default: "Bellissima Boutique — Premium Handcrafted Sarees & Jewellery, Pune",
+    default: "Bellissima Boutique | Premium Handcrafted Sarees & Jewellery, Pune",
     template: "%s | Bellissima Boutique",
   },
   description:
@@ -30,7 +30,7 @@ export const metadata = {
     canonical: "https://www.bellissimaboutique.in/",
   },
   openGraph: {
-    title: "Bellissima Boutique — Premium Handcrafted Sarees & Jewellery, Pune",
+    title: "Bellissima Boutique | Premium Handcrafted Sarees & Jewellery, Pune",
     description:
       "Exquisite handcrafted sarees, traditional clutches, and statement jewellery curated at Bellissima Boutique in Pune.",
     url: "https://www.bellissimaboutique.in/",
@@ -48,7 +48,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bellissima Boutique — Premium Handcrafted Sarees & Jewellery, Pune",
+    title: "Bellissima Boutique | Premium Handcrafted Sarees & Jewellery, Pune",
     description:
       "Exquisite handcrafted sarees, traditional clutches, and statement jewellery curated at Bellissima Boutique in Pune.",
     images: ["/images/Model Shoot/DSC_0087_first.jpg"],

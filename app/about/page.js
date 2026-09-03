@@ -38,7 +38,7 @@ export default function AboutPage() {
         >
           <Image
             src="/images/hero-bg.jpg"
-            alt="Bellissima Boutique Pune — Heritage Handcrafted Sarees"
+            alt="Bellissima Boutique Pune - Heritage Handcrafted Sarees"
             fill
             sizes="100vw"
             className="object-cover"
@@ -84,7 +84,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissima Boutique Pune — The Art of Indian Sarees and Textiles"
+                alt="Bellissima Boutique Pune - The Art of Indian Sarees and Textiles"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -110,7 +110,7 @@ export default function AboutPage() {
               <div className="w-12 h-[1px] bg-gold/40 my-8" />
               <div className="space-y-6 text-charcoal/60 leading-relaxed">
                 <p>
-                  Bellissima Boutique was born from a simple yet profound idea — that every woman
+                  Bellissima Boutique was born from a simple yet profound idea: that every woman
                   deserves to feel extraordinary in what she wears. The Italian word for
                   &quot;most beautiful,&quot; Bellissima reflects our commitment to bringing
                   the finest sarees to discerning women who appreciate artistry and heritage.
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <p>
                   What began as a personal passion for collecting rare, handwoven sarees
                   soon blossomed into something much larger. Each visit to weaving clusters
-                  across India — from Varanasi to Kanchipuram, from Chanderi to Maheshwar —
+                  across India, from Varanasi to Kanchipuram, from Chanderi to Maheshwar,
                   deepened the conviction that these textile traditions deserve a platform
                   that honors their beauty while making them accessible to the modern woman.
                 </p>
@@ -137,7 +137,7 @@ export default function AboutPage() {
       <section className="py-24 bg-warm-gray overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* Text — reversed order on desktop */}
+            {/* Text - reversed order on desktop */}
             <motion.div
               className="lg:order-2"
               initial={{ opacity: 0, x: 40 }}
@@ -187,7 +187,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissima Boutique Pune — Handcrafted Weaves Curated with Love"
+                alt="Bellissima Boutique Pune - Handcrafted Weaves Curated with Love"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
