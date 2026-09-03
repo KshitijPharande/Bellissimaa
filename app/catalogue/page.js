@@ -178,12 +178,12 @@ function CatalogueContent() {
             Our Collection
           </motion.p>
           <motion.h1 
-            className="text-4xl sm:text-5xl font-[family-name:var(--font-heading)] text-white"
+            className="text-3xl sm:text-5xl font-[family-name:var(--font-heading)] text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Our Collections
+            Handcrafted Sarees & Collections
           </motion.h1>
           <motion.div 
             className="divider-gold mt-6"
@@ -192,13 +192,12 @@ function CatalogueContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
           />
           <motion.p 
-            className="mt-6 text-white/50 max-w-lg mx-auto text-sm leading-relaxed"
+            className="mt-6 text-white/60 max-w-xl mx-auto text-sm leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Explore our curated collections. From heritage handloomed sarees to premium handbags,
-            timeless statement jewellery, and custom dress materials.
+            Explore our handcrafted sarees and ethnic collections at Bellissima Boutique in Pune. From heritage silk drapes to designer clutches and timeless jewellery.
           </motion.p>
         </div>
       </section>
@@ -628,14 +627,16 @@ function CatalogueCard({ product }) {
       <Link
         href={`/catalogue/${product.slug}`}
         id={`catalogue-card-${product.slug}`}
+        aria-label={`View ${product.name} details`}
         className={`group block ${isOutOfStock ? 'opacity-65' : ''}`}
       >
         {/* Image */}
         <div className="relative aspect-[3/4] overflow-hidden bg-white mb-3.5 shadow-[0_4px_25px_rgba(0,0,0,0.01)]">
           <Image
             src={product.images[0]}
-            alt={product.name}
+            alt={`Bellissima Boutique Pune — ${product.name || 'Ethnic Saree'}`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={`object-contain transition-transform duration-[1s] ${
               isOutOfStock ? 'grayscale' : 'group-hover:scale-105'
             }`}

@@ -38,8 +38,9 @@ export default function AboutPage() {
         >
           <Image
             src="/images/hero-bg.jpg"
-            alt="Bellissima heritage"
+            alt="Bellissima Boutique Pune — Heritage Handcrafted Sarees"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </motion.div>
@@ -58,7 +59,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            About Bellissima
+            About Bellissima Boutique
           </motion.h1>
           <motion.div
             className="divider-gold mt-6"
@@ -83,8 +84,9 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissima — the art of Indian textiles"
+                alt="Bellissima Boutique Pune — The Art of Indian Sarees and Textiles"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-6 border border-gold/25" />
@@ -108,7 +110,7 @@ export default function AboutPage() {
               <div className="w-12 h-[1px] bg-gold/40 my-8" />
               <div className="space-y-6 text-charcoal/60 leading-relaxed">
                 <p>
-                  Bellissima was born from a simple yet profound idea — that every woman
+                  Bellissima Boutique was born from a simple yet profound idea — that every woman
                   deserves to feel extraordinary in what she wears. The Italian word for
                   &quot;most beautiful,&quot; Bellissima reflects our commitment to bringing
                   the finest sarees to discerning women who appreciate artistry and heritage.
@@ -121,7 +123,7 @@ export default function AboutPage() {
                   that honors their beauty while making them accessible to the modern woman.
                 </p>
                 <p>
-                  Today, Bellissima stands as a bridge between centuries-old weaving traditions
+                  Today, Bellissima Boutique in Pune stands as a bridge between centuries-old weaving traditions
                   and contemporary aesthetics. Every saree in our collection is a carefully
                   curated piece that celebrates the magic of handcrafted Indian textiles.
                 </p>
@@ -185,8 +187,9 @@ export default function AboutPage() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissima — Crafted with Love"
+                alt="Bellissima Boutique Pune — Handcrafted Weaves Curated with Love"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent" />

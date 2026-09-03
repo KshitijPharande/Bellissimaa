@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Our Collections',
+  title: 'Ethnic Collections & Saree Catalogue',
   description:
-    'Browse our curated collections at Bellissima — featuring handcrafted sarees, premium handbags, statement jewellery, and custom dress materials. Filter by category and availability.',
+    'Browse the curated designer collections at Bellissima Boutique Pune — featuring handcrafted Banarasi, Kanchi Silk, Organza and Paithani sarees, designer velvet clutches, and statement jewellery.',
 };
 
 export default function CatalogueLayout({ children }) {

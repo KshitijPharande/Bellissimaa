@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Contact',
+  title: 'Contact Us',
   description:
-    'Get in touch with Bellissima. Reach us via WhatsApp, phone, or email. Based in Pune, Maharashtra.',
+    'Get in touch with Bellissima Boutique in Pune. Reach out via WhatsApp or email for personalized saree styling consultations, price inquiries, and order support.',
 };
 
 export default function ContactLayout({ children }) {

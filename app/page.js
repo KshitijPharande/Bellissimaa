@@ -53,11 +53,11 @@ export default function Home() {
         >
           <Image
             src="/images/hero-bg.jpg"
-            alt="Bellissima luxury saree collection"
+            alt="Bellissima Boutique Pune — Premium handcrafted sarees and ethnic wear collection"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
-            quality={90}
           />
         </motion.div>
 
@@ -104,6 +104,7 @@ export default function Home() {
             <Link
               href="/catalogue"
               id="hero-cta-catalogue"
+              aria-label="Explore Handcrafted Saree and Ethnic Collection"
               className="group relative inline-flex items-center gap-2 px-10 py-4 text-sm tracking-[0.2em] uppercase overflow-hidden"
             >
               <span className="absolute inset-0 gold-gradient opacity-95 group-hover:opacity-100 transition-opacity duration-300" />
@@ -128,6 +129,7 @@ export default function Home() {
             <Link
               href="/about"
               id="hero-cta-about"
+              aria-label="Read Our Story — About Bellissima Boutique"
               className="inline-flex items-center gap-2 px-10 py-4 text-sm tracking-[0.2em] uppercase text-white/90 border border-white/20 hover:border-gold hover:text-gold transition-all duration-300"
             >
               Our Story
@@ -257,13 +259,15 @@ export default function Home() {
                 <Link
                   href={`/catalogue?category=${cat.slug}`}
                   id={`category-${cat.slug}`}
+                  aria-label={`Explore ${cat.name} Collection`}
                   className="group relative block aspect-[3/4] overflow-hidden bg-charcoal"
                 >
                   {/* Image */}
                   <Image
                     src={cat.image}
-                    alt={cat.name}
+                    alt={`Bellissima Boutique Pune — ${cat.name || 'Ethnic Category'}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-[1s] group-hover:scale-105"
                   />
 
@@ -343,8 +347,9 @@ export default function Home() {
             >
               <Image
                 src="/images/hero-bg.jpg"
-                alt="Bellissima — the art of saree"
+                alt="Bellissima Boutique Pune — Handloomed Sarees and Heritage Indian Craftsmanship"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 to-transparent" />
@@ -385,6 +390,7 @@ export default function Home() {
               <Link
                 href="/about"
                 id="story-cta"
+                aria-label="Discover the Bellissima Heritage and Journey"
                 className="inline-flex items-center gap-3 text-sm tracking-[0.2em] uppercase text-gold border border-gold/40 px-10 py-4 hover:bg-gold/10 transition-all duration-300 group"
               >
                 Discover Our Journey
@@ -490,14 +496,16 @@ function ProductCard({ product }) {
       <Link
         href={`/catalogue/${product.slug}`}
         id={`product-card-${product.slug}`}
+        aria-label={`View ${product.name} details`}
         className={`group block h-full ${isOutOfStock ? 'opacity-65' : ''}`}
       >
         {/* Image Container */}
         <div className="relative aspect-[3/4] overflow-hidden bg-warm-gray mb-4 shadow-[0_4px_25px_rgba(0,0,0,0.02)]">
           <Image
             src={product.images[0]}
-            alt={product.name}
+            alt={`Bellissima Boutique Pune — ${product.name || 'Handcrafted Saree'}`}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className={`object-cover transition-transform duration-[1s] ${
               isOutOfStock ? 'grayscale' : 'group-hover:scale-105'
             }`}

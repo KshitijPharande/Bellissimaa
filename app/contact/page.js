@@ -54,12 +54,12 @@ export default function ContactPage() {
             We&apos;d Love to Hear from You
           </motion.p>
           <motion.h1 
-            className="text-4xl sm:text-5xl font-[family-name:var(--font-heading)] text-white"
+            className="text-3xl sm:text-5xl font-[family-name:var(--font-heading)] text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Get In Touch
+            Contact Bellissima Boutique
           </motion.h1>
           <motion.div 
             className="divider-gold mt-6"
@@ -85,8 +85,8 @@ export default function ContactPage() {
                 Let&apos;s Connect
               </h2>
               <p className="text-charcoal/60 leading-relaxed mb-10">
-                Whether you have a question about our collection, need styling advice, 
-                or simply want to say hello — we&apos;re here for you. We personally 
+                Whether you have a question about our handcrafted saree collections, need personalized styling advice, 
+                or wish to connect with Bellissima Boutique in Pune — we&apos;re here for you. We personally 
                 respond to every inquiry.
               </p>
 
